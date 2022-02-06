@@ -49,9 +49,11 @@
         "conflicts": [
             {
                 "name": "apsj",
-                "description": "Shared styles between the two modules. Having both is redundant and may cause issues.",
-                "versionMin": "0.9.5",
-                "versionMax": "1.0.0"
+                "description": "Shared styles between the two modules. Having both is redundant and may cause issues."
+            },
+            {
+                "name": "mce-config",
+                "description": "APSJ4MEJ provides the same toolbar changes, and more!"
             }
         ]
     },
