@@ -35,12 +35,12 @@
     "media": [
         {
             "type": "screenshot",
-            "url": "https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/assets/apsj4mej-ss.webp",
+            "url": "https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/media/apsj4mej-ss.webp",
             "caption": "Stylish Journal Entry"
         },
         {
             "type": "cover",
-            "url": "https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/assets/apsj4mej-cover.webp",
+            "url": "https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/media/apsj4mej-cover.webp",
             "caption": "Arius Planeswalker's Stylish Journal for Monk's Enhanced Journal"
         }
     ],
