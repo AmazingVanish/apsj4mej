@@ -1,71 +1,55 @@
-![](https://img.shields.io/badge/Foundry-v0.8.6-informational)
-<!--- Downloads @ Latest Badge -->
-<!--- replace <user>/<repo> with your username/repository -->
-<!--- ![Latest Release Download Count](https://img.shields.io/github/downloads/<user>/<repo>/latest/module.zip) -->
+# Arius Planeswalker's Stylish Journal for Monk's Enhanced Journal
 
-<!--- Forge Bazaar Install % Badge -->
-<!--- replace <your-module-name> with the `name` in your manifest -->
-<!--- ![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2F<your-module-name>&colorB=4aa94a) -->
+![Version](https://img.shields.io/github/v/tag/AmazingVanish/apsj4mej?label=Version&style=flat-square&color=2577a1) ![Latest Release Download Count](https://img.shields.io/github/downloads/AmazingVanish/apsj4mej/latest/module.zip?label=Downloads&style=flat-square&color=9b43a8) ![Supported Foundry Versions](https://img.shields.io/endpoint?url=https://foundryshields.com/version?url=https://raw.githubusercontent.com/AmazingVanish/apsjmej/main/module.json&style=flat-square&color=ff6400) [![Discord Server](https://img.shields.io/badge/-Discord-%232c2f33?style=flat-square&logo=discord)](https://discord.gg/ge9GJXDsM2)
 
+## Arius Planeswalker Presents Stylish Journal for Monk's Enhanced Journal
 
-# How to use this Template to create a versioned Release
+Need to draw attention to important information in your journals? Panels have you covered, from informative to notes to warnings and bonuses.
+Like the D&D style text? Fake it till you make it with D&D Text Styles you can apply to Headings and body text.
+No more boring encounter pages. Liven it up with the Encounter Block, complete with Adversary listing!
+Add some panache to your Magic Item listings and pull out the important stats and item links to a quickly accessible aside.
+Have a description to read aloud and need a way to differentiate it on the page? Read Aloud block to the rescue!
 
-1. Open your repository's releases page.
+_Stop looking at those boring old pale pages. Add some vibrance and style to your journal entries today!_
 
-![Where to click to open repository releases.](https://user-images.githubusercontent.com/7644614/93409301-9fd25080-f864-11ea-9e0c-bdd09e4418e4.png)
+## Installation
 
-2. Click "Draft a new release"
+In the setup screen, use the URL `https://github.com/AmazingVanish/apsj4mej/releases/latest/download/module.json` to install the module.
 
-![Draft a new release button.](https://user-images.githubusercontent.com/7644614/93409364-c1333c80-f864-11ea-89f1-abfcb18a8d9f.png)
+## Usage
 
-3. Fill out the release version as the tag name.
+After enabling the module, everything is ready to go. I've tried to make it as easy as possible to use the new features.
 
-If you want to add details at this stage you can, or you can always come back later and edit them.
+The new Text Styles can be found under the Style dropdown at the left of the toolbar.
+![text-styles](https://raw.github.com/AmazingVanish/apsj4mej/main/media/apsj4mej-text-styles.webp)
 
-![Release Creation Form](https://user-images.githubusercontent.com/7644614/93409543-225b1000-f865-11ea-9a19-f1906a724421.png)
+You can find the new Panels and Blocks under the Templates button.
+![templates](https://raw.github.com/AmazingVanish/apsj4mej/main/media/apsj4mej-template.webp)
 
-4. Hit submit.
+## Media
 
-5. Wait a few minutes.
+![screenshot](https://raw.githubusercontent.com/AmazingVanish/apsj4mej/main/media/apsj4mej-ss.webp)
+_Screenshot showing available stylings and templates_
 
-A Github Action will run to populate the `module.json` and `module.zip` with the correct urls that you can then use to distribute this release. You can check on its status in the "Actions" tab.
+![toolbar](https://raw.github.com/AmazingVanish/apsj4mej/main/media/apsj4mej-toolbar.webp)
+_The new toolbar with added options_
 
-![Actions Tab](https://user-images.githubusercontent.com/7644614/93409820-c1800780-f865-11ea-8c6b-c3792e35e0c8.png)
+![encounter](https://raw.github.com/AmazingVanish/apsj4mej/main/media/apsj4mej-encounter.webp)
+_Screenshot of an Encounter Entry_
 
-6. Grab the module.json url from the release's details page.
+![quest](https://raw.github.com/AmazingVanish/apsj4mej/main/media/apsj4mej-quest.webp)
+_Screenshot of an Encounter Entry_
 
-![image](https://user-images.githubusercontent.com/7644614/93409960-10c63800-f866-11ea-83f6-270cc5d10b71.png)
+## License
 
-This `module.json` will only ever point at this release's `module.zip`, making it useful for sharing a specific version for compatibility purposes.
+Copyright © 2022 DreamScape Visionery, LLC. All rights reserved.
 
-7. You can use the url `https://github.com/<user>/<repo>/releases/latest/download/module.json` to refer to the manifest.
+This package is under an [MIT license](LICENSE) and the [Foundry Virtual Tabletop Limited License Agreement for module development](https://foundryvtt.com/article/license/).
 
-This is the url you want to use to install the module typically, as it will get updated automatically.
+## Bugs
 
-# How to List Your Releases on Package Admin
+You can submit bugs via [Github Issues](https://github.com/AmazingVanish/apsj4mej/issues/new/choose) or on [my Discord server](https://discord.gg/ge9GJXDsM2) or use the :bug: Bug Report module to submit bugs in game.
 
-To request a package listing for your first release, go to the [Package Submission Form](https://foundryvtt.com/packages/submit) (accessible via a link at the bottom of the "[Systems and Modules](https://foundryvtt.com/packages/)" page on the Foundry website).
+## Contact me
 
-Fill in the form. "Package Name" must match the name in the module manifest.  Package Title will be the display name for the package.  Package URL should be your repo URL.
-![image](https://user-images.githubusercontent.com/36359784/120664263-b49e5500-c482-11eb-9126-af7006389903.png)
-
-
-One of the Foundry staff will typically get back to you with an approval or any further questions within a few days, and give you access to the package admin pages.
-
-Once you have access to the [module admin page](https://foundryvtt.com/admin/packages/package/), you can release a new version by going into the page for your module, scrolling to the bottom, and filling in a new Package Version.
-
-When listing a new version, Version should be the version number you set above, and the Manifest URL should be the manifest __for that specific version__ (do not use /latest/ here).
-![image](https://user-images.githubusercontent.com/36359784/120664346-c4b63480-c482-11eb-9d8b-731b50d70939.png)
-
-> ### :warning: Important :warning:
-> 
-> It is very important that you use the specific release manifest url, and not the `/latest` url here. For more details about why this is important and how Foundry Installs/Updates packages, read [this wiki article](https://foundryvtt.wiki/en/development/guides/releases-and-history).
-
-Clicking "Save" in the bottom right will save the new version, which means that anyone installing your module from within Foundry will get that version, and a post will be generated in the #release-announcements channel on the official Foundry VTT Discord.
-
-
-# FoundryVTT Module
-
-Does something, probably
-
-## Changelog
+Come hang out on my [my Discord server](https://discord.gg/ge9GJXDsM2) or [click here to send me an email](mailto:chris.vancleve@dscape-llc.com?subject=Arius%20Planeswalker's%20Stylish%20Journal%20for%20Monk's%20Enhanced%20Journal%20module%20for%20Foundry%20VTT).
