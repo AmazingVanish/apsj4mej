@@ -37,7 +37,7 @@ _The new toolbar with added options_
 ![encounter](https://raw.github.com/AmazingVanish/apsj4mej/master/media/apsj4mej-encounter.webp)
 _Screenshot of an Encounter Entry_
 
-![quest](https://raw.github.com/AmazingVanish/apsj4mej/main/master/apsj4mej-quest.webp)
+![quest](https://raw.github.com/AmazingVanish/apsj4mej/master/media/apsj4mej-quest.webp)
 _Screenshot of an Encounter Entry_
 
 ## License
