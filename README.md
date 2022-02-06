@@ -38,7 +38,7 @@ _The new toolbar with added options_
 _Screenshot of an Encounter Entry_
 
 ![quest](https://raw.github.com/AmazingVanish/apsj4mej/master/media/apsj4mej-quest.webp)
-_Screenshot of an Quest Entry_
+_Screenshot of a Quest Entry_
 
 ## License
 
