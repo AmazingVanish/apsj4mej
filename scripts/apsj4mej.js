@@ -1,4 +1,30 @@
 Hooks.on('init', () => {
+    game.settings.register('apsj4mej', 'apsj4mejEnableParchment', {
+        name: game.i18n.format('APSJ4MEJ.menuEnableParchmentName'),
+        hint: game.i18n.format('APSJ4MEJ.menuEnableParchmentHint'),
+        scope: 'client',
+        config: true,
+        default: true,
+        type: Boolean,
+        onChange: () => window.location.reload(),
+    });
+
+    // game.settings.register('apsj4mej', 'apsj4mejTitleSize', {
+    //     name: game.i18n.format('APSJ4MEJ.menuTitleSizeName'),
+    //     scope: 'world',
+    //     config: true,
+    //     type: Number,
+    //     default: '48',
+    // });
+
+    // game.settings.register('apsj4mej', 'apsj4mejHeadingSize', {
+    //     name: game.i18n.format('APSJ4mEJ.menuHeadingSizeName'),
+    //     scope: 'world',
+    //     config: true,
+    //     type: Number,
+    //     default: '36',
+    // });
+
     CONFIG.TinyMCE.plugins =
         ' advlist lists searchreplace textpattern template image table hr code save link';
 
@@ -9,31 +35,64 @@ Hooks.on('init', () => {
 });
 
 Hooks.on('ready', () => {
+    if (game.settings.get('apsj4mej', 'apsj4mejEnableParchment')) {
+        let innerHTML = '';
+        let style = document.createElement('style');
+        style.id = 'apsj4mej-changes';
+        innerHTML += `
+.monks-enhanced-journal .mainbar {
+	background-image: url(modules/apsj4mej/assets/parchment-medium.webp);
+}
+
+.monks-enhanced-journal .directory-sidebar {
+	background-image: url(modules/apsj4mej/assets/parchment-medium.webp) !important;
+}
+
+.monks-enhanced-journal .tab-bar .journal-tab.active {
+	background-image: url(modules/apsj4mej/assets/parchment.webp);
+}
+
+.monks-journal-sheet .encounter-body {
+	background-image: url(modules/apsj4mej/assets/parchment-bloody.webp);
+}
+
+.monks-journal-sheet,
+.monks-journal-sheet.sheet .person-container,
+.monks-journal-sheet.sheet .place-container,
+.monks-journal-sheet.sheet .quest-container,
+.monks-journal-sheet.sheet .organization-container,
+.monks-journal-sheet.sheet .shop-container,
+.monks-journal-sheet.sheet .loot-container,
+.monks-journal-sheet.sheet .poi-container {
+	background-image: url(modules/apsj4mej/assets/parchment.webp);
+}
+`;
+        style.innerHTML = innerHTML;
+        if (innerHTML != '') {
+            document.querySelector('head').appendChild(style);
+        }
+    }
+
     CONFIG.TinyMCE.style_formats.push({
         title: 'Stylish Text',
         items: [
             {
-                title: 'D&D Title',
+                title: 'Stylish Heading (Title)',
                 selector: 'h1,h2,h3,h4,h5,h6,th',
                 classes: 'dnd-title',
             },
             {
-                title: 'Adventure Title',
-                selector: 'h1,h2,h3,h4,h5,h6,th',
-                classes: 'adv-title',
-            },
-            {
-                title: 'D&D Heading',
+                title: 'Stylish Heading',
                 selector: 'h1,h2,h3,h4,h5,h6,th',
                 classes: 'dnd-heading',
             },
             {
-                title: 'D&D Data / DM',
-                selector: 'h1,h2,h3,h4,h5,h6,th,p,td',
+                title: 'Stylish Data',
+                selector: 'h1,h2,h3,h4,h5,h6,th',
                 classes: 'dnd-data',
             },
             {
-                title: 'D&D Text',
+                title: 'Stylish Paragraph',
                 selector: 'p,td',
                 classes: 'dnd-text',
             },

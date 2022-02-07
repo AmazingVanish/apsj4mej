@@ -1,7 +1,7 @@
 :root {
     --color-apsj-base-border: rgba(128, 0, 0, 1);
     --color-apsj-base-background: rgba(128, 0, 0, 0.75);
-    --color-apsj-magic-border: rgba(92, 135, 185, 1);
+    --color-apsj-magic-border: rgb(92, 135, 185);
     --color-apsj-light-background: rgba(255, 255, 255, 0.75);
     --color-apsj-dark-background: rgba(64, 64, 64, 0.25);
 }
@@ -13,28 +13,28 @@
 
 @font-face {
     font-family: 'BookInsanity';
-    src: url('../fonts/Bookinsanity/BookInsanity.otf') format('opentype');
+    src: url('../fonts/BookInsanity/BookInsanity.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'BookInsanity';
-    src: url('../fonts/Bookinsanity/BookInsanityBold.otf') format('opentype');
+    src: url('../fonts/BookInsanity/BookInsanityBold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'BookInsanity';
-    src: url('../fonts/Bookinsanity/BookInsanityItalic.otf') format('opentype');
+    src: url('../fonts/BookInsanity/BookInsanityItalic.otf') format('opentype');
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'BookInsanity';
-    src: url('../fonts/Bookinsanity/BookInsanityBoldItalic.otf')
+    src: url('../fonts/BookInsanity/BookInsanityBoldItalic.otf')
         format('opentype');
     font-weight: 700;
     font-style: italic;
@@ -112,28 +112,25 @@
     background-image: url(../assets/parchment-medium.webp) !important;
 } */
 
-.editor-content h1 {
-    font-size: xxx-large;
+.editor-content table tbody tr td {
+    padding: 0 15px;
 }
 
-.editor-content h2 {
-    font-size: xx-large;
+.editor-content table tbody tr td:first-child {
+    white-space: nowrap;
 }
 
-.editor-content h3 {
-    font-size: x-large;
+.editor-content blockquote {
+    margin-bottom: 1.5em;
 }
 
-.editor-content h4 {
-    font-size: large;
+.editor-content {
+    padding-right: 5px;
+    overflow-x: hidden;
 }
 
-.editor-content h5 {
-    font-size: medium;
-}
-
-.editor-content h6 {
-    font-size: small;
+li > .entity-link {
+    line-height: 1.75em;
 }
 
 table thead {
@@ -169,33 +166,6 @@ a.inline-roll i {
 /*
  Monk's Enhanced Journal Style Overrides
 */
-
-.monks-enhanced-journal .mainbar {
-    background-image: url(../assets/parchment-medium.webp);
-}
-
-.monks-enhanced-journal .directory-sidebar {
-    background-image: url(../assets/parchment-medium.webp) !important;
-}
-
-.monks-enhanced-journal .tab-bar .journal-tab.active {
-    background-image: url(../assets/parchment.webp);
-}
-
-.monks-journal-sheet .encounter-body {
-    background-image: url(../assets/parchment-bloody.webp);
-}
-
-.monks-journal-sheet,
-.monks-journal-sheet.sheet .person-container,
-.monks-journal-sheet.sheet .place-container,
-.monks-journal-sheet.sheet .quest-container,
-.monks-journal-sheet.sheet .organization-container,
-.monks-journal-sheet.sheet .shop-container,
-.monks-journal-sheet.sheet .loot-container,
-.monks-journal-sheet.sheet .poi-container {
-    background-image: url(../assets/parchment.webp);
-}
 
 .monks-journal-sheet .header-name {
     font-family: 'Modesto Condensed';
@@ -298,8 +268,8 @@ a.inline-roll i {
 }
 
 .panel.info {
-    background: rgba(47, 80, 132, 0.75);
-    border: 1px solid var(--color-apsj-magic-border);
+    background: rgb(57, 90, 150);
+    border: 2px solid rgb(110, 150, 200);
 }
 
 .panel.info::before {
@@ -307,8 +277,8 @@ a.inline-roll i {
 }
 
 .panel.note {
-    background: rgba(214, 150, 0, 0.75);
-    border: 1px solid #d69e07;
+    background: rgb(214, 150, 0);
+    border: 2px solid #f6be07;
 }
 
 .panel.note::before {
@@ -316,8 +286,8 @@ a.inline-roll i {
 }
 
 .panel.warning {
-    background: rgba(105, 0, 8, 0.75);
-    border: 1px solid #750003;
+    background: rgb(128, 0, 0);
+    border: 2px solid #d00000;
 }
 
 .panel.warning::before {
@@ -325,8 +295,8 @@ a.inline-roll i {
 }
 
 .panel.bonus {
-    background: rgba(101, 155, 0, 0.75);
-    border: 1px solid #8ad304;
+    background: rgb(101, 155, 0);
+    border: 2px solid #8ad304;
 }
 
 .panel.bonus::before {
@@ -376,7 +346,7 @@ a.inline-roll i {
 }
 
 .block p {
-    font-family: 'Bookinsanity';
+    font-family: 'BookInsanity';
     font-weight: 400;
 }
 
