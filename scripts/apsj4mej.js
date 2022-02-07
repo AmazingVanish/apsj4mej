@@ -105,37 +105,37 @@ Hooks.on('ready', () => {
             title: 'Panel: Information',
             description: 'A stylish panel to provide an informational message.',
             content:
-                '<section class="panel info"><header><b>Information Heading</b></header><main><p>The body of the Informational Message.</p></main></section>',
+                '<section class="panel info"><header><b>Information Heading</b></header><main><p>The body of the Informational Message.</p></main></section><p></p>',
         },
         {
             title: 'Panel: Note',
             description: 'A stylish panel to provide a note.',
             content:
-                '<section class="panel note"><header><b>Note Heading</b></header><main><p>The body of the Note.</p></main></section>',
+                '<section class="panel note"><header><b>Note Heading</b></header><main><p>The body of the Note.</p></main></section><p></p>',
         },
         {
             title: 'Panel: Warning',
             description: 'A stylish panel to provide a warning message.',
             content:
-                '<section class="panel warning"><header><b>Warning Heading</b></header><main><p>The body of the Warning Message.</p></main></section>',
+                '<section class="panel warning"><header><b>Warning Heading</b></header><main><p>The body of the Warning Message.</p></main></section><p></p>',
         },
         {
             title: 'Panel: Bonus',
             description: 'A stylish panel to provide an Bonus message.',
             content:
-                '<section class="panel bonus"><header><b>Bonus Heading</b></header><main><p>The body of the Bonus Message.</p></main></section>',
+                '<section class="panel bonus"><header><b>Bonus Heading</b></header><main><p>The body of the Bonus Message.</p></main></section><p></p>',
         },
         {
             title: 'Block: Magic Item',
             description:
                 "A stylish block to display a magic item's description and stats.",
-            content: `<section class="block magic-item"><header><h1>Magic Item Name</h1></header><div class="block-contents"><main><h2>Description</h2><p>Description of the item and its abilities.</p><p>Place Stats in the aside to the right, and a link to the item below the divider.</p></main><aside class="blue-overlay"><h2>Stats</h2><p></p><hr><p></p></aside></section>`,
+            content: `<section class="block magic-item"><header><h1>Magic Item Name</h1></header><div class="block-contents"><main><h2>Description</h2><p>Description of the item and its abilities.</p><p>Place Stats in the aside to the right, and a link to the item below the divider.</p></main><aside class="blue-overlay"><h2>Stats</h2><p></p><hr><p></p></aside></section><p></p>`,
         },
         {
             title: 'Block: Read Aloud',
             description:
                 'A stylish block to denote flavor text to be read aloud to the players.',
-            content: `<section class="block read-aloud"><main><div class="icon"></div><p>Flavor text to read aloud to the players.</p></main></section>`,
+            content: `<section class="block read-aloud"><main><div class="icon"></div><p>Flavor text to read aloud to the players.</p></main></section><p></p>`,
         }
     );
 });

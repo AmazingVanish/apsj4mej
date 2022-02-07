@@ -1,5 +1,9 @@
 # RELEASE NOTES
 
+## Version 1.2.1 - Spacing Fix
+
+-   Add paragrpah tags at the end of all templates so the user can continue to work below them easily.
+
 ## Version 1.2.0 - Parchment Setting
 
 -   Added a setting to enable/disable the parchment background (Thanks KSMI for the request)
