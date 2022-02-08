@@ -1,5 +1,10 @@
 # RELEASE NOTES
 
+## Version 1.2.5 - Warhammer 4e Compatibility
+
+-   Modified the way I style interface elements in Monk's Enhanced Journal to apply ONLY to the DND5e system
+-   Modified the Warhammer 4e version to make text in tabs black instead of white so they show up correctly
+
 ## Version 1.2.1 - Spacing Fix
 
 -   Add paragrpah tags at the end of all templates so the user can continue to work below them easily.

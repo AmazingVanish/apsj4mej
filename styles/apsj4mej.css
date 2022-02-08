@@ -188,6 +188,10 @@ a.inline-roll i {
     color: var(--color-text-light-0) !important;
 }
 
+.monks-enhanced-journal .tab-bar .journal-tab .tab-content {
+    color: #000000;
+}
+
 .monks-enhanced-journal .mainbar .navigation {
     background: var(--color-apsj-base-background) !important;
 }
@@ -197,12 +201,12 @@ a.inline-roll i {
     background: var(--color-apsj-light-background) !important;
 }
 
-.monks-enhanced-journal .sidebar-directory .action-buttons button {
+.dnd5e .monks-enhanced-journal .sidebar-directory .action-buttons button {
     border: 1px solid var(--color-text-light-0) !important;
     background: var(--color-apsj-light-background) !important;
 }
 
-.monks-enhanced-journal .mainbar .navigation .nav-input {
+.dnd5e .monks-enhanced-journal .mainbar .navigation .nav-input {
     border: 1px solid var(--color-text-light-0) !important;
     background: var(--color-apsj-light-background) !important;
 }
@@ -400,7 +404,7 @@ a.inline-roll i {
 
 .icon {
     float: left;
-    margin: 0 8px 0 -30px;
+    margin: 0 8px 0 -30px !important;
 }
 
 .icon::before {
