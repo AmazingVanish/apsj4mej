@@ -189,7 +189,17 @@ a.inline-roll i {
 }
 
 .monks-enhanced-journal .tab-bar .journal-tab .tab-content {
-    color: #000000;
+    color: #ffffff;
+}
+
+.monks-enhanced-journal .tab-bar .journal-tab {
+    background: var(--color-apsj-base-background) !important;
+    border: 1px solid rgb(192, 0, 0) !important;
+}
+
+.monks-enhanced-journal .tab-bar .journal-tab.active {
+    background: rgba(192, 0, 0, 0.75) !important;
+    border: 1px solid rgb(224, 0, 0) !important;
 }
 
 .monks-enhanced-journal .mainbar .navigation {
@@ -218,26 +228,31 @@ a.inline-roll i {
 .dnd-title {
     font-family: 'Modesto Condensed';
     font-weight: 700;
-}
-
-.adv-title {
-    font-family: 'Dungeon';
-    font-weight: 700;
+    font-size: 36pt;
 }
 
 .dnd-heading {
     font-family: 'MrEaves';
     font-weight: 700;
+    font-size: 24pt;
 }
 
 .dnd-data {
     font-family: 'ScalySans';
     font-weight: 700;
+    font-size: 10pt;
+}
+
+.dnd-panel-heading {
+    font-family: 'ScalySansCaps';
+    font-weight: 700;
+    font-size: 14pt;
 }
 
 .dnd-text {
     font-family: 'BookInsanity';
     font-weight: 400;
+    font-size: 12pt;
 }
 
 /*
@@ -312,7 +327,7 @@ a.inline-roll i {
  */
 
 .block {
-    margin: 0 5%;
+    margin: 1em 5%;
     padding: 1em;
     width: 90%;
     display: flex;

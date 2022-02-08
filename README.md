@@ -1,6 +1,6 @@
 # Arius Planeswalker's Stylish Journal for Monk's Enhanced Journal
 
-![All Releases Downloads](https://img.shields.io/github/downloads/AmazingVanish/apsj4mej/total?logo=GitHub) ![Latest Release Downloads](https://img.shields.io/github/downloads/AmazingVanish/apsj4mej/latest/total) ![GitHub Release (latest by date)](https://img.shields.io/github/v/release/AmazingVanish/apsj4mej) ![Supported Foundry Versions](https://img.shields.io/endpoint?url=https://foundryshields.com/version?url=https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/module.json&style=flat-square&color=ff6400) [![Discord Server](https://img.shields.io/badge/-Discord-%232c2f33?style=flat-square&logo=discord)](https://discord.gg/ge9GJXDsM2)
+![All Releases Downloads](https://img.shields.io/github/downloads/AmazingVanish/apsj4mej/total?logo=GitHub) ![Latest Release Downloads](https://img.shields.io/github/downloads/AmazingVanish/apsj4mej/latest/total) ![Forge Installs](https://img.shields.io/badge/dynamic/json?color=red&label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fapsj4mej) [![Endorsements](https://img.shields.io/endpoint?logoColor=white&url=https%3A%2F%2Fwww.foundryvtt-hub.com%2Fwp-json%2Fhubapi%2Fv1%2Fpackage%2Fapsj4mej%2Fshield%2Fendorsements)](https://www.foundryvtt-hub.com/package/df-architect/) ![GitHub Release (latest by date)](https://img.shields.io/github/v/release/AmazingVanish/apsj4mej) ![Issues](https://img.shields.io/github/issues/AmazingVanish/apsj4mej) ![Foundry](https://img.shields.io/endpoint?url=https://foundryshields.com/version?url=https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/module.json&style=flat-square&color=ff6400) [![Discord Server](https://img.shields.io/badge/-Discord-%232c2f33?style=flat-square&logo=discord)](https://discord.gg/ge9GJXDsM2)
 
 ## Arius Planeswalker Presents Stylish Journal for Monk's Enhanced Journal
 
@@ -15,6 +15,10 @@ _Stop looking at those boring old pale pages. Add some vibrance and style to you
 ## Installation
 
 In the setup screen, use the URL `https://github.com/AmazingVanish/apsj4mej/releases/latest/download/module.json` to install the module.
+
+## Dependencies
+
+-   [Monk's Enhanced Journal](https://www.foundryvtt-hub.com/package/monks-enhanced-journal/)
 
 ## Usage
 
@@ -33,6 +37,15 @@ _Screenshot showing available stylings and templates_
 
 ![toolbar](https://raw.github.com/AmazingVanish/apsj4mej/master/media/apsj4mej-toolbar.webp)
 _The new toolbar with added options_
+
+![toolbar group: format](https://raw.github.com/AmazingVanish/apsj4mej/master/media/apsj4mej-tbformat.webp)
+_The options under the Format icon_
+
+![toolbar group: format](https://raw.github.com/AmazingVanish/apsj4mej/master/media/apsj4mej-tbpara.webp)
+_The options under the Paragraph icon_
+
+![toolbar group: format](https://raw.github.com/AmazingVanish/apsj4mej/master/media/apsj4mej-tbinsert.webp)
+_The options under the Insert icon_
 
 ![encounter](https://raw.github.com/AmazingVanish/apsj4mej/master/media/apsj4mej-encounter.webp)
 _Screenshot of an Encounter Entry_
