@@ -1,9 +1,20 @@
 # RELEASE NOTES
 
+## Version 1.3.0 - Toolbar and Font sizes
+
+-   Remove the separators from the toolbar to prevent TinyMCE from truncating. This prevents the persistent display of the toolbar when closing the journal dialog (Thanks SecretSquirrel77)
+-   Combined some toolbar icons into 3 groups so it doesn't require as much horizontal real estate yet provides more options:
+    -   Format (bold italic underline strikethrough forecolor backcolor superscript subscript removeformat)
+    -   Paragraph ('h1 h2 h3 bullist numlist alignleft aligncenter alignright indent outdent)
+    -   Insert (link anchor image table hr template)
+-   Set more reasonable default font sizes for the Stylish Text (Thanks weepingminotaur for the idea)
+-   Colored the journal tabs and made the active tab stand out more
+-   Added margin spacing around the block elements so they dispolay nicer when one right after another
+
 ## Version 1.2.5 - Warhammer 4e Compatibility
 
 -   Modified the way I style interface elements in Monk's Enhanced Journal to apply ONLY to the DND5e system
--   Modified the Warhammer 4e version to make text in tabs black instead of white so they show up correctly
+-   Modified the Warhammer 4e version to make text in tabs black instead of white so they show up correctly (Thanks Sasmira)
 
 ## Version 1.2.1 - Spacing Fix
 

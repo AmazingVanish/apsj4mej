@@ -1,3 +1,8 @@
+const debouncedReload = foundry.utils.debounce(
+    () => window.location.reload(),
+    100
+);
+
 Hooks.on('init', () => {
     game.settings.register('apsj4mej', 'apsj4mejEnableParchment', {
         name: game.i18n.format('APSJ4MEJ.menuEnableParchmentName'),
@@ -6,30 +11,66 @@ Hooks.on('init', () => {
         config: true,
         default: true,
         type: Boolean,
-        onChange: () => window.location.reload(),
+        onChange: debouncedReload,
     });
 
-    // game.settings.register('apsj4mej', 'apsj4mejTitleSize', {
-    //     name: game.i18n.format('APSJ4MEJ.menuTitleSizeName'),
+    // game.settings.register('apsj', 'apsjTitleSize', {
+    //     name: game.i18n.format('APSJ.menuTitleSizeName'),
     //     scope: 'world',
     //     config: true,
-    //     type: Number,
+    //     type: String,
     //     default: '48',
+    //     choices: {
+    //         '8': '8',
+    //         '10': '10',
+    //         '12': '12',
+    //         '14': '14',
+    //         '18': '18',
+    //         '24': '24',
+    //         '36': '36',
+    //     },
     // });
 
-    // game.settings.register('apsj4mej', 'apsj4mejHeadingSize', {
-    //     name: game.i18n.format('APSJ4mEJ.menuHeadingSizeName'),
+    // game.settings.register('apsj', 'apsjHeadingSize', {
+    //     name: game.i18n.format('APSJ.menuHeadingSizeName'),
     //     scope: 'world',
     //     config: true,
-    //     type: Number,
+    //     type: String,
     //     default: '36',
+    //     choices: {
+    //         '8': '8',
+    //         '10': '10',
+    //         '12': '12',
+    //         '14': '14',
+    //         '18': '18',
+    //         '24': '24',
+    //         '36': '36',
+    //     },
     // });
 
     CONFIG.TinyMCE.plugins =
-        ' advlist lists searchreplace textpattern template image table hr code save link';
+        ' advlist lists anchor searchreplace textpattern template image table hr code save link';
 
     CONFIG.TinyMCE.toolbar =
-        'styleselect fontselect fontsizeselect forecolor backcolor | bullist numlist image table hr link | removeformat template code | save';
+        'styleselect fontselect fontsizeselect formatgroup paragraphgroup insertgroup code save';
+
+    CONFIG.TinyMCE.toolbar_groups = {
+        formatgroup: {
+            icon: 'format',
+            tooltip: 'Formatting',
+            items: 'bold italic underline strikethrough | forecolor backcolor | superscript subscript | removeformat',
+        },
+        paragraphgroup: {
+            icon: 'paragraph',
+            tooltip: 'Paragraph format',
+            items: 'h1 h2 h3 | bullist numlist | alignleft aligncenter alignright | indent outdent',
+        },
+        insertgroup: {
+            icon: 'plus',
+            tooltip: 'Insert',
+            items: 'link anchor image table hr | template',
+        },
+    };
 
     CONFIG.TinyMCE.content_css.push('modules/apsj4mej/styles/apsj4mej.css');
 });
@@ -104,38 +145,92 @@ Hooks.on('ready', () => {
         {
             title: 'Panel: Information',
             description: 'A stylish panel to provide an informational message.',
-            content:
-                '<section class="panel info"><header><b>Information Heading</b></header><main><p>The body of the Informational Message.</p></main></section><p></p>',
+            content: `
+<section class="panel info">
+	<header class="dnd-panel-heading">Information Heading</header>
+	<main>
+		<p class="dnd-data">The body of the Informational Message.</p>
+	</main>
+</section>
+<p class="dnd-text"></p>`,
         },
         {
             title: 'Panel: Note',
             description: 'A stylish panel to provide a note.',
-            content:
-                '<section class="panel note"><header><b>Note Heading</b></header><main><p>The body of the Note.</p></main></section><p></p>',
+            content: `
+<section class="panel note">
+	<header class="dnd-panel-heading">Note Heading</header>
+	<main>
+		<p class="dnd-data">The body of the Note.</p>
+	</main>
+</section>
+<p class="dnd-text"></p>`,
         },
         {
             title: 'Panel: Warning',
             description: 'A stylish panel to provide a warning message.',
-            content:
-                '<section class="panel warning"><header><b>Warning Heading</b></header><main><p>The body of the Warning Message.</p></main></section><p></p>',
+            content: `
+<section class="panel warning">
+	<header class="dnd-panel-heading">Warning Heading</header>
+	<main>
+		<p class="dnd-data">The body of the Warning message.</p>
+	</main>
+</section>
+<p class="dnd-text"></p>`,
         },
         {
             title: 'Panel: Bonus',
             description: 'A stylish panel to provide an Bonus message.',
-            content:
-                '<section class="panel bonus"><header><b>Bonus Heading</b></header><main><p>The body of the Bonus Message.</p></main></section><p></p>',
+            content: `
+<section class="panel bonus">
+	<header class="dnd-panel-heading">Bonus Heading</header>
+	<main>
+		<p class="dnd-data">The body of the Bnus message.</p>
+	</main>
+</section>
+<p class="dnd-text"></p>`,
         },
         {
             title: 'Block: Magic Item',
             description:
                 "A stylish block to display a magic item's description and stats.",
-            content: `<section class="block magic-item"><header><h1>Magic Item Name</h1></header><div class="block-contents"><main><h2>Description</h2><p>Description of the item and its abilities.</p><p>Place Stats in the aside to the right, and a link to the item below the divider.</p></main><aside class="blue-overlay"><h2>Stats</h2><p></p><hr><p></p></aside></section><p></p>`,
+            content: `
+<section class="block magic-item">
+	<header>
+		<h1 class="dnd-title">Magic Item Name</h1>
+	</header>
+	<div class="block-contents">
+		<main>
+			<h2 class="dnd-heading">Description</h2>
+			<p class="dnd-text">Description of the item and its abilities.</p>
+			<p class="dnd-text">Place Stats in the aside to the right, and a link to the item below the divider.</p>
+		</main>
+		<aside class="blue-overlay">
+			<h2 class="dnd-heading">Stats</h2>
+			<p class="dnd-data"></p>
+			<hr>
+			<p class="dnd-data"></p>
+		</aside>
+	</div>
+</section>
+<p class="dnd-text"></p>`,
         },
         {
             title: 'Block: Read Aloud',
             description:
                 'A stylish block to denote flavor text to be read aloud to the players.',
-            content: `<section class="block read-aloud"><main><div class="icon"></div><p>Flavor text to read aloud to the players.</p></main></section><p></p>`,
+            content: `
+<section class="block read-aloud">
+	<main>
+		<div class="icon"></div>
+		<p class="dnd-text">Flavor text to read aloud to the players.</p>
+	</main>
+</section>
+<p class="dnd-text"></p>`,
         }
     );
 });
+
+console.log(`
+\r\n  _________ __          .__  .__       .__     \r\n \/   _____\/\/  |_ ___.__.|  | |__| _____|  |__  \r\n \\_____  \\\\   __<   |  ||  | |  |\/  ___\/  |  \\ \r\n \/        \\|  |  \\___  ||  |_|  |\\___ \\|   Y  \\\r\n\/_______  \/|__|  \/ ____||____\/__\/____  >___|  \/\r\n        \\\/       \\\/                  \\\/     \\\/ \r\n
+`);
