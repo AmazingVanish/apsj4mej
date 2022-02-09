@@ -89,7 +89,7 @@ Hooks.on('ready', () => {
 	background-image: url(modules/apsj4mej/assets/parchment-medium.webp) !important;
 }
 
-.monks-enhanced-journal .tab-bar .journal-tab.active {
+.dnd5e .monks-enhanced-journal .tab-bar .journal-tab.active {
 	background-image: url(modules/apsj4mej/assets/parchment.webp);
 }
 
@@ -222,7 +222,7 @@ Hooks.on('ready', () => {
             content: `
 <section class="block read-aloud">
 	<main>
-		<div class="icon"></div>
+		<div class="ra-icon"></div>
 		<p class="dnd-text">Flavor text to read aloud to the players.</p>
 	</main>
 </section>
@@ -230,7 +230,3 @@ Hooks.on('ready', () => {
         }
     );
 });
-
-console.log(`
-\r\n  _________ __          .__  .__       .__     \r\n \/   _____\/\/  |_ ___.__.|  | |__| _____|  |__  \r\n \\_____  \\\\   __<   |  ||  | |  |\/  ___\/  |  \\ \r\n \/        \\|  |  \\___  ||  |_|  |\\___ \\|   Y  \\\r\n\/_______  \/|__|  \/ ____||____\/__\/____  >___|  \/\r\n        \\\/       \\\/                  \\\/     \\\/ \r\n
-`);

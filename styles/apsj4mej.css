@@ -1,9 +1,56 @@
 :root {
-    --color-apsj-base-border: rgba(128, 0, 0, 1);
-    --color-apsj-base-background: rgba(128, 0, 0, 0.75);
-    --color-apsj-magic-border: rgb(92, 135, 185);
-    --color-apsj-light-background: rgba(255, 255, 255, 0.75);
-    --color-apsj-dark-background: rgba(64, 64, 64, 0.25);
+    --color-apsj-primary: rgb(128, 0, 0);
+
+    --color-apsj-light-0: rgb(255, 255, 255);
+    --color-apsj-light-1: rgb(238, 238, 238);
+    --color-apsj-light-2: rgb(221, 221, 221);
+    --color-apsj-light-3: rgb(204, 204, 204);
+    --color-apsj-light-4: rgb(187, 187, 187);
+    --color-apsj-light-5: rgb(170, 170, 170);
+    --color-apsj-light-6: rgb(153, 153, 153);
+    --color-apsj-light-7: rgb(136, 136, 136);
+    --color-apsj-dark-7: rgb(119, 119, 119);
+    --color-apsj-dark-6: rgb(102, 102, 102);
+    --color-apsj-dark-5: rgb(85, 85, 85);
+    --color-apsj-dark-4: rgb(68, 68, 68);
+    --color-apsj-dark-3: rgb(51, 51, 51);
+    --color-apsj-dark-2: rgb(34, 34, 34);
+    --color-apsj-dark-1: rgb(17, 17, 17);
+    --color-apsj-dark-0: rgb(0, 0, 0);
+
+    --color-apsj-background-primary: rgba(128, 0, 0, 0.75);
+    --color-apsj-background-info: rgba(57, 90, 150, 0.75);
+    --color-apsj-background-note: rgba(214, 150, 0, 0.75);
+    --color-apsj-background-bonus: rgba(101, 155, 0, 0.75);
+    --color-apsj-background-light-0: rgba(255, 255, 255, 0.75);
+    --color-apsj-background-light-1: rgba(238, 238, 238, 0.75);
+    --color-apsj-background-light-2: rgba(221, 221, 221, 0.75);
+    --color-apsj-background-light-3: rgba(204, 204, 204, 0.75);
+    --color-apsj-background-light-4: rgba(187, 187, 187, 0.75);
+    --color-apsj-background-light-5: rgba(170, 170, 170, 0.75);
+    --color-apsj-background-light-6: rgba(153, 153, 153, 0.75);
+    --color-apsj-background-light-7: rgba(136, 136, 136, 0.75);
+    --color-apsj-background-dark-7: rgba(119, 119, 119, 0.75);
+    --color-apsj-background-dark-6: rgba(102, 102, 102, 0.75);
+    --color-apsj-background-dark-5: rgba(85, 85, 85, 0.75);
+    --color-apsj-background-dark-4: rgba(68, 68, 68, 0.75);
+    --color-apsj-background-dark-3: rgba(51, 51, 51, 0.75);
+    --color-apsj-background-dark-2: rgba(34, 34, 34, 0.75);
+    --color-apsj-background-dark-1: rgba(17, 17, 17, 0.75);
+    --color-apsj-background-dark-0: rgba(0, 0, 0, 0.75);
+
+    --color-apsj-border-primary: rgb(160, 0, 0);
+    --color-apsj-border-info: rgb(110, 150, 200);
+    --color-apsj-border-note: rgb(246, 190, 7);
+    --color-apsj-border-bonus: rgb(138, 211, 4);
+
+    --font-apsj-modesto: 'Modesto Condensed', 'Palatino Linotype', serif;
+    --font-apsj-signika: 'Signika', sans-serif;
+    --font-apsj-book: 'BookInsanity', serif;
+    --font-apsj-mreaves: 'MrEaves', serif;
+    --font-apsj-scalysans: 'ScalySans', sans-serif;
+    --font-apsj-scalycaps: 'ScalySansCaps', sans-serif;
+    --font-apsj-awesome: 'Font Awesome 5 Free', serif;
 }
 
 /*
@@ -133,34 +180,39 @@ li > .entity-link {
     line-height: 1.75em;
 }
 
+table {
+    width: 90% !important;
+    margin: 1em 5% !important;
+}
+
 table thead {
-    background-color: var(--color-apsj-base-border) !important;
-    font-family: 'ScalySansCaps';
+    background-color: var(--color-apsj-background-primary) !important;
+    font-family: var(--font-apsj-scalycaps);
     font-weight: 700;
-    text-shadow: 1px 1px 2px var(--color-shadow-dark);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
 }
 
 td {
-    font-family: 'ScalySans';
+    font-family: var(--font-apsj-scalysans);
     font-weight: 400;
 }
 
 a.entity-link,
 a.content-link,
 a.inline-roll {
-    font-family: 'ScalySans';
+    font-family: var(--font-apsj-scalysans);
     font-weight: 700;
     border-radius: 0.35em !important;
     background: linear-gradient(
-        var(--color-apsj-light-background),
-        var(--color-apsj-dark-background)
+        var(--color-apsj-background-light-0),
+        var(--color-apsj-background-dark-4)
     ) !important;
 }
 
 a.entity-link i,
 a.content-link i,
 a.inline-roll i {
-    text-shadow: 1px 1px 2px var(--color-shadow-dark);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
 }
 
 /*
@@ -168,57 +220,104 @@ a.inline-roll i {
 */
 
 .monks-journal-sheet .header-name {
-    font-family: 'Modesto Condensed';
+    font-family: var(--font-apsj-modesto);
 }
 
 .monks-journal-sheet.sheet .sheet-header .sheet-image {
-    background: rgb(226, 0, 0);
     background: linear-gradient(
-        180deg,
-        rgba(95, 0, 0, 0.75) 0%,
-        rgba(181, 0, 0, 0.75) 31%,
-        rgba(226, 0, 0, 0.75) 55%,
-        rgba(164, 0, 0, 0.75) 84%,
-        rgba(255, 0, 0, 0.75) 100%
+        var(--color-apsj-background-light-4),
+        var(--color-apsj-background-dark-4)
     ) !important;
 }
 
 .monks-journal-sheet.sheet .items-list .items-header {
-    background: var(--color-apsj-base-background) !important;
-    color: var(--color-text-light-0) !important;
+    background: var(--color-apsj-background-primary) !important;
+    color: var(--color-apsj-light-0) !important;
 }
 
-.monks-enhanced-journal .tab-bar .journal-tab .tab-content {
-    color: #ffffff;
+.dnd5e .monks-enhanced-journal .mainbar > div {
+    border-bottom: 1px solid var(--color-apsj-primary) !important;
 }
 
-.monks-enhanced-journal .tab-bar .journal-tab {
-    background: var(--color-apsj-base-background) !important;
-    border: 1px solid rgb(192, 0, 0) !important;
+.dnd5e .monks-enhanced-journal .tab-bar .journal-tab .tab-content {
+    color: var(--color-apsj-dark-0) !important;
 }
 
-.monks-enhanced-journal .tab-bar .journal-tab.active {
-    background: rgba(192, 0, 0, 0.75) !important;
-    border: 1px solid rgb(224, 0, 0) !important;
+.dnd5e .monks-enhanced-journal .tab-bar,
+.dnd5e .monks-enhanced-journal .bookmark-bar,
+.dnd5e .directory .directory-header {
+    background: var(--color-apsj-background-primary) !important;
+    color: var(--color-apsj-light-0) !important;
 }
 
-.monks-enhanced-journal .mainbar .navigation {
-    background: var(--color-apsj-base-background) !important;
+.dnd5e .monks-enhanced-journal .tab-bar .journal-tab {
+    border: 1px solid var(--color-apsj-light-2) !important;
+    background: var(--color-apsj-background-light-3) !important;
+    color: var(--color-apsj-dark-2) !important;
 }
 
-.monks-journal-sheet.sheet .journal-subsheet .items-list .item-controls input {
-    border: 1px solid var(--color-text-light-0) !important;
-    background: var(--color-apsj-light-background) !important;
+.dnd5e .monks-enhanced-journal .tab-bar .journal-tab:hover {
+    background: var(--color-apsj-background-primary) !important;
+    border: 1px solid var(--color-apsj-primary) !important;
+    color: var(--color-apsj-light-3) !important;
 }
 
-.dnd5e .monks-enhanced-journal .sidebar-directory .action-buttons button {
-    border: 1px solid var(--color-text-light-0) !important;
-    background: var(--color-apsj-light-background) !important;
+.dnd5e .monks-enhanced-journal .mainbar .navigation {
+    background: var(--color-apsj-background-primary) !important;
+    color: var(--color-apsj-light-0) !important;
+}
+
+.dnd5e .monks-enhanced-journal .mainbar .navigation .nav-button {
+    color: var(--color-apsj-dark-2) !important;
+}
+
+.dnd5e
+    .monks-journal-sheet.sheet
+    .journal-subsheet
+    .items-list
+    .item-controls
+    input,
+.dnd5e .monks-enhanced-journal .sidebar-directory .action-buttons button,
+.dnd5e .monks-enhanced-journal .bookmark-bar .bookmark-button,
+.dnd5e .monks-enhanced-journal .tab-bar .journal-tab.active {
+    border: 1px solid var(--color-apsj-light-0) !important;
+    background: var(--color-apsj-background-light-0) !important;
+    color: var(--color-apsj-dark-2) !important;
+}
+
+.dnd5e .monks-enhanced-journal .mainbar .navigation .nav-button:hover,
+.dnd5e .monks-enhanced-journal .bookmark-bar .bookmark-button:hover,
+.dnd5e
+    .monks-journal-sheet.sheet
+    .journal-subsheet
+    .items-list
+    .item-controls
+    input:hover,
+.dnd5e .monks-enhanced-journal .sidebar-directory .action-buttons button:hover,
+.dnd5e .monks-enhanced-journal .tab-bar .journal-tab.active:hover,
+.dnd5e .monks-journal-sheet .journal-subsheet .encounter-buttons > div:hover {
+    color: var(--color-apsj-light-3) !important;
+    background: rgb(192, 0, 0) !important;
+    border: 1px solid var(--color-apsj-light-3) !important;
 }
 
 .dnd5e .monks-enhanced-journal .mainbar .navigation .nav-input {
-    border: 1px solid var(--color-text-light-0) !important;
-    background: var(--color-apsj-light-background) !important;
+    border: 1px solid var(--color-apsj-light-0) !important;
+    background: var(--color-apsj-background-light-0) !important;
+    color: var(--color-apsj-dark) !important;
+}
+
+.dnd5e #journal-directory li.journalentry {
+    border-top: 1px solid rgb(192, 0, 0) !important;
+    border-bottom: 1px solid var(--color-apsj-primary) !important;
+    color: var(--color-apsj-dark) !important;
+}
+
+.dnd5e #journal-directory li.journalentry:hover {
+    background: var(--color-apsj-background-primary) !important;
+    border-top: 1px solid var(--color-apsj-light-3) !important;
+    border-bottom: 1px solid var(--color-apsj-light-3) !important;
+    color: var(--color-apsj-light-3) !important;
 }
 
 /*
@@ -226,31 +325,31 @@ a.inline-roll i {
   */
 
 .dnd-title {
-    font-family: 'Modesto Condensed';
+    font-family: var(--font-apsj-modesto);
     font-weight: 700;
     font-size: 36pt;
 }
 
 .dnd-heading {
-    font-family: 'MrEaves';
+    font-family: var(--font-apsj-mreaves);
     font-weight: 700;
     font-size: 24pt;
 }
 
 .dnd-data {
-    font-family: 'ScalySans';
+    font-family: var(--font-apsj-scalysans);
     font-weight: 700;
     font-size: 10pt;
 }
 
 .dnd-panel-heading {
-    font-family: 'ScalySansCaps';
+    font-family: var(--font-apsj-scalycaps);
     font-weight: 700;
     font-size: 14pt;
 }
 
 .dnd-text {
-    font-family: 'BookInsanity';
+    font-family: var(--font-apsj-book);
     font-weight: 400;
     font-size: 12pt;
 }
@@ -265,15 +364,15 @@ a.inline-roll i {
     padding: 6px 8px;
     line-height: 20px;
     border-radius: 5px;
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 5px var(--color-shadow-dark);
-    color: var(--color-text-light-highlight);
+    background: var(--color-apsj-background-dark-0);
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
+    color: var(--color-apsj-light-0);
     list-style: none;
 }
 
 .panel::before {
     position: relative;
-    font-family: 'Font Awesome 5 Free';
+    font-family: var(--font-apsj-awesome);
     font-weight: 900;
     margin-right: 8px;
     float: left;
@@ -281,14 +380,14 @@ a.inline-roll i {
 
 .panel header {
     margin: 0;
-    font-family: 'ScalySansCaps';
+    font-family: var(--font-apsj-scalycaps);
     font-weight: 400;
-    text-shadow: 1px 1px 2px var(--color-shadow-dark);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
 }
 
 .panel.info {
-    background: rgb(57, 90, 150);
-    border: 2px solid rgb(110, 150, 200);
+    background: var(--color-apsj-background-info);
+    border: 2px solid var(--color-apsj-border-info);
 }
 
 .panel.info::before {
@@ -296,8 +395,8 @@ a.inline-roll i {
 }
 
 .panel.note {
-    background: rgb(214, 150, 0);
-    border: 2px solid #f6be07;
+    background: var(--color-apsj-background-note);
+    border: 2px solid var(--color-apsj-border-note);
 }
 
 .panel.note::before {
@@ -305,8 +404,8 @@ a.inline-roll i {
 }
 
 .panel.warning {
-    background: rgb(128, 0, 0);
-    border: 2px solid #d00000;
+    background: var(--color-apsj-background-primary);
+    border: 2px solid var(--color-apsj-border-primary);
 }
 
 .panel.warning::before {
@@ -314,8 +413,8 @@ a.inline-roll i {
 }
 
 .panel.bonus {
-    background: rgb(101, 155, 0);
-    border: 2px solid #8ad304;
+    background: var(--color-apsj-background-bonus);
+    border: 2px solid var(--color-apsj-border-bonus);
 }
 
 .panel.bonus::before {
@@ -349,9 +448,9 @@ a.inline-roll i {
 }
 
 .block h1 {
-    font-family: 'Modesto Condensed';
+    font-family: var(--font-apsj-modesto);
     font-weight: 700;
-    text-shadow: 1px 1px 2px var(--color-shadow-dark);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
 }
 
 .block h2,
@@ -359,23 +458,23 @@ a.inline-roll i {
 .block h4,
 .block h5,
 .block h6 {
-    font-family: 'MrEaves';
+    font-family: var(--font-apsj-mreaves);
     font-weight: 700;
-    text-shadow: 1px 1px 2px var(--color-shadow-dark);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
 }
 
 .block p {
-    font-family: 'BookInsanity';
+    font-family: var(--font-apsj-book);
     font-weight: 400;
 }
 
 .block.magic-item {
-    color: var(--color-text-light-0);
-    border: 2px solid var(--color-apsj-magic-border);
+    color: var(--color-apsj-light-0);
+    border: 2px solid var(--color-apsj-border-info);
     border-radius: 0.5em;
     background: url('../assets/magic-stars.webp') no-repeat center;
     background-size: cover;
-    box-shadow: 0 0 5px var(--color-shadow-dark);
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
 }
 
 .block.magic-item h1,
@@ -385,84 +484,85 @@ a.inline-roll i {
 .block.magic-item h5,
 .block.magic-item h6,
 .block.magic-item hr {
-    text-shadow: 1px 1px 2px var(--color-shadow-dark);
-    border-bottom: 2px solid var(--color-apsj-magic-border);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
+    border-bottom: 2px solid var(--color-apsj-border-info);
 }
 
 .block.magic-item a.entity-link,
 .block.magic-item a.content-link,
 .block.magic-item a.inline-roll {
-    border: 1px solid var(--color-apsj-magic-border) !important;
-    text-shadow: 1px 1px 2px var(--color-shadow-dark);
+    border: 1px solid var(--color-apsj-border-info) !important;
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
 }
 
 .block.magic-item a.entity-link i,
 .block.magic-item a.content-link i,
 .block.magic-item a.inline-roll i {
-    color: var(--color-apsj-light-background) !important;
-    text-shadow: 1px 1px 2px var(--color-shadow-dark);
+    color: var(--color-apsj-background-light-0) !important;
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
 }
 
 .block.magic-item a:hover {
-    text-shadow: 0 0 8px var(--color-apsj-magic-border);
+    text-shadow: 0 0 8px var(--color-apsj-border-info);
 }
 
 .block.read-aloud {
-    border: 2px solid var(--color-apsj-base-border);
+    border: 2px solid var(--color-apsj-primary);
     border-radius: 0.5em;
     background: linear-gradient(
-        var(--color-apsj-light-background),
-        var(--color-apsj-dark-background)
+        var(--color-apsj-background-light-0),
+        var(--color-apsj-background-dark-4)
     );
-    box-shadow: 0 0 5px var(--color-shadow-dark);
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
 }
 
-.icon {
+.ra-icon {
     float: left;
     margin: 0 8px 0 -30px !important;
 }
 
-.icon::before {
-    font-family: 'Font Awesome 5 Free';
+.ra-icon::before {
+    font-family: var(--font-apsj-awesome);
     font-weight: 900;
     font-size: xxx-large;
-    color: var(--color-apsj-base-border);
-    text-shadow: 1px 1px 2px var(--color-shadow-dark);
+    color: var(--color-apsj-primary);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
     content: '\f4ad';
 }
 
 .block.read-aloud a.entity-link,
 .block.read-aloud a.content-link,
 .block.read-aloud a.inline-roll {
-    border: 1px solid var(--color-apsj-base-border) !important;
+    border: 1px solid var(--color-apsj-primary) !important;
+    font-family: var(--font-apsj-scalysans);
 }
 
 .red-overlay {
     margin: 0;
     padding: 10px;
     background: linear-gradient(rgba(255, 0, 0, 0.75), rgba(124, 0, 0, 0.75));
-    border: 2px solid var(--color-apsj-base-border);
+    border: 2px solid var(--color-apsj-primary);
     border-radius: 0.5em;
-    box-shadow: 0 0 5px var(--color-shadow-dark);
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
 }
 
 .blue-overlay {
     margin: 0;
     padding: 10px;
     background: linear-gradient(rgba(6, 68, 180, 0.75), rgba(0, 40, 103, 0.75));
-    border: 2px solid var(--color-apsj-magic-border);
+    border: 2px solid var(--color-apsj-border-info);
     border-radius: 0.5em;
-    box-shadow: 0 0 5px var(--color-shadow-dark);
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
 }
 
 .light-overlay {
     margin: 0;
     padding: 10px;
     background: linear-gradient(
-        var(--color-apsj-light-background),
-        var(--color-apsj-dark-background)
+        var(--color-apsj-background-light-0),
+        var(--color-apsj-background-dark-4)
     );
-    border: 2px solid var(--color-apsj-base-border);
+    border: 2px solid var(--color-apsj-primary);
     border-radius: 0.5em;
-    box-shadow: 0 0 5px var(--color-shadow-dark);
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
 }
