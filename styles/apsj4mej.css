@@ -244,8 +244,8 @@ a.inline-roll i {
 }
 
 .dnd5e .monks-enhanced-journal .tab-bar,
-.dnd5e .monks-enhanced-journal .bookmark-bar,
-.dnd5e .directory .directory-header {
+.monks-enhanced-journal .bookmark-bar,
+.monks-enhanced-journal .directory .directory-header {
     background: var(--color-apsj-background-primary) !important;
     color: var(--color-apsj-light-0) !important;
 }
@@ -262,12 +262,12 @@ a.inline-roll i {
     color: var(--color-apsj-light-3) !important;
 }
 
-.dnd5e .monks-enhanced-journal .mainbar .navigation {
+.monks-enhanced-journal .mainbar .navigation {
     background: var(--color-apsj-background-primary) !important;
     color: var(--color-apsj-light-0) !important;
 }
 
-.dnd5e .monks-enhanced-journal .mainbar .navigation .nav-button {
+.monks-enhanced-journal .mainbar .navigation .nav-button {
     color: var(--color-apsj-dark-2) !important;
 }
 
@@ -278,15 +278,15 @@ a.inline-roll i {
     .item-controls
     input,
 .dnd5e .monks-enhanced-journal .sidebar-directory .action-buttons button,
-.dnd5e .monks-enhanced-journal .bookmark-bar .bookmark-button,
+.monks-enhanced-journal .bookmark-bar .bookmark-button,
 .dnd5e .monks-enhanced-journal .tab-bar .journal-tab.active {
     border: 1px solid var(--color-apsj-light-0) !important;
     background: var(--color-apsj-background-light-0) !important;
     color: var(--color-apsj-dark-2) !important;
 }
 
-.dnd5e .monks-enhanced-journal .mainbar .navigation .nav-button:hover,
-.dnd5e .monks-enhanced-journal .bookmark-bar .bookmark-button:hover,
+.monks-enhanced-journal .mainbar .navigation .nav-button:hover,
+.monks-enhanced-journal .bookmark-bar .bookmark-button:hover,
 .dnd5e
     .monks-journal-sheet.sheet
     .journal-subsheet
@@ -325,33 +325,33 @@ a.inline-roll i {
   */
 
 .dnd-title {
-    font-family: var(--font-apsj-modesto);
-    font-weight: 700;
-    font-size: 36pt;
+    font-family: var(--font-apsj-modesto) !important;
+    font-weight: 700 !important;
+    font-size: 36pt !important;
 }
 
 .dnd-heading {
-    font-family: var(--font-apsj-mreaves);
-    font-weight: 700;
-    font-size: 24pt;
+    font-family: var(--font-apsj-mreaves) !important;
+    font-weight: 700 !important;
+    font-size: 24pt !important;
 }
 
 .dnd-data {
-    font-family: var(--font-apsj-scalysans);
-    font-weight: 700;
-    font-size: 10pt;
+    font-family: var(--font-apsj-scalysans) !important;
+    font-weight: 700 !important;
+    font-size: 10pt !important;
 }
 
 .dnd-panel-heading {
-    font-family: var(--font-apsj-scalycaps);
-    font-weight: 700;
-    font-size: 14pt;
+    font-family: var(--font-apsj-scalycaps) !important;
+    font-weight: 700 !important;
+    font-size: 14pt !important;
 }
 
 .dnd-text {
-    font-family: var(--font-apsj-book);
-    font-weight: 400;
-    font-size: 12pt;
+    font-family: var(--font-apsj-book) !important;
+    font-weight: 400 !important;
+    font-size: 12pt !important;
 }
 
 /*
@@ -448,9 +448,9 @@ a.inline-roll i {
 }
 
 .block h1 {
-    font-family: var(--font-apsj-modesto);
-    font-weight: 700;
-    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
+    font-family: var(--font-apsj-modesto) !important;
+    font-weight: 700 !important;
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0) !important;
 }
 
 .block h2,
@@ -458,19 +458,14 @@ a.inline-roll i {
 .block h4,
 .block h5,
 .block h6 {
-    font-family: var(--font-apsj-mreaves);
-    font-weight: 700;
-    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
-}
-
-.block p {
-    font-family: var(--font-apsj-book);
-    font-weight: 400;
+    font-family: var(--font-apsj-mreaves) !important;
+    font-weight: 700 !important;
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0) !important;
 }
 
 .block.magic-item {
-    color: var(--color-apsj-light-0);
-    border: 2px solid var(--color-apsj-border-info);
+    color: var(--color-apsj-light-0) !important;
+    border: 2px solid var(--color-apsj-border-info) !important;
     border-radius: 0.5em;
     background: url('../assets/magic-stars.webp') no-repeat center;
     background-size: cover;
@@ -482,32 +477,43 @@ a.inline-roll i {
 .block.magic-item h3,
 .block.magic-item h4,
 .block.magic-item h5,
-.block.magic-item h6,
+.block.magic-item h6 {
+    color: var(--color-apsj-light-0) !important;
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0) !important;
+    border-bottom: 2px solid var(--color-apsj-border-info) !important;
+}
+
+.block.magic-item .dnd-text {
+    color: var(--color-apsj-light-0) !important;
+}
+
 .block.magic-item hr {
-    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
-    border-bottom: 2px solid var(--color-apsj-border-info);
+    color: var(--color-apsj-border-info) !important;
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0) !important;
+    border-bottom: 2px solid var(--color-apsj-border-info) !important;
 }
 
 .block.magic-item a.entity-link,
 .block.magic-item a.content-link,
 .block.magic-item a.inline-roll {
+    color: var(--color-apsj-light-0) !important;
     border: 1px solid var(--color-apsj-border-info) !important;
-    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0) !important;
 }
 
 .block.magic-item a.entity-link i,
 .block.magic-item a.content-link i,
 .block.magic-item a.inline-roll i {
     color: var(--color-apsj-background-light-0) !important;
-    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0) !important;
 }
 
 .block.magic-item a:hover {
-    text-shadow: 0 0 8px var(--color-apsj-border-info);
+    text-shadow: 0 0 8px var(--color-apsj-border-info) !important;
 }
 
 .block.read-aloud {
-    border: 2px solid var(--color-apsj-primary);
+    border: 2px solid var(--color-apsj-primary) !important;
     border-radius: 0.5em;
     background: linear-gradient(
         var(--color-apsj-background-light-0),
@@ -517,7 +523,7 @@ a.inline-roll i {
 }
 
 .ra-icon {
-    float: left;
+    float: left !important;
     margin: 0 8px 0 -30px !important;
 }
 
@@ -534,7 +540,7 @@ a.inline-roll i {
 .block.read-aloud a.content-link,
 .block.read-aloud a.inline-roll {
     border: 1px solid var(--color-apsj-primary) !important;
-    font-family: var(--font-apsj-scalysans);
+    font-family: var(--font-apsj-scalysans) !important;
 }
 
 .red-overlay {

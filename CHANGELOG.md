@@ -16,7 +16,7 @@
     -   Insert (link anchor image table hr template)
 -   Set more reasonable default font sizes for the Stylish Text (Thanks weepingminotaur for the idea)
 -   Added margin spacing around the block elements so they display nicer when one right after another
--   Ensured compatibility with Warhammer Fantasy 4e. This version is very DnD 5e-centric. Most styling changes only affect that system so as to avoid affecting other systems which may already be styled, like Warhammer Fantasy 4e.
+-   Ensured compatibility with Warhammer Fantasy 4e
 -   MOAR VARIABLES
 
 **ADDED**
