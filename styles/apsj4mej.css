@@ -1,5 +1,11 @@
+/*
+  APSJ Variables
+*/
+
 :root {
     --color-apsj-primary: rgb(128, 0, 0);
+    --color-apsj-background-primary: rgba(128, 0, 0, 0.75);
+    --color-apsj-border-primary: rgb(160, 0, 0);
 
     --color-apsj-light-0: rgb(255, 255, 255);
     --color-apsj-light-1: rgb(238, 238, 238);
@@ -18,7 +24,7 @@
     --color-apsj-dark-1: rgb(17, 17, 17);
     --color-apsj-dark-0: rgb(0, 0, 0);
 
-    --color-apsj-background-primary: rgba(128, 0, 0, 0.75);
+    --color-apsj-background-warning: rgba(128, 0, 0, 0.75);
     --color-apsj-background-info: rgba(57, 90, 150, 0.75);
     --color-apsj-background-note: rgba(214, 150, 0, 0.75);
     --color-apsj-background-bonus: rgba(101, 155, 0, 0.75);
@@ -39,7 +45,24 @@
     --color-apsj-background-dark-1: rgba(17, 17, 17, 0.75);
     --color-apsj-background-dark-0: rgba(0, 0, 0, 0.75);
 
-    --color-apsj-border-primary: rgb(160, 0, 0);
+    --color-apsj-background-light-50: rgba(255, 255, 255, 0.5);
+    --color-apsj-background-light-51: rgba(238, 238, 238, 0.5);
+    --color-apsj-background-light-52: rgba(221, 221, 221, 0.5);
+    --color-apsj-background-light-53: rgba(204, 204, 204, 0.5);
+    --color-apsj-background-light-54: rgba(187, 187, 187, 0.5);
+    --color-apsj-background-light-55: rgba(170, 170, 170, 0.5);
+    --color-apsj-background-light-56: rgba(153, 153, 153, 0.5);
+    --color-apsj-background-light-57: rgba(136, 136, 136, 0.5);
+    --color-apsj-background-dark-57: rgba(119, 119, 119, 0.5);
+    --color-apsj-background-dark-56: rgba(102, 102, 102, 0.5);
+    --color-apsj-background-dark-55: rgba(85, 85, 85, 0.5);
+    --color-apsj-background-dark-54: rgba(68, 68, 68, 0.5);
+    --color-apsj-background-dark-53: rgba(51, 51, 51, 0.5);
+    --color-apsj-background-dark-52: rgba(34, 34, 34, 0.5);
+    --color-apsj-background-dark-51: rgba(17, 17, 17, 0.5);
+    --color-apsj-background-dark-50: rgba(0, 0, 0, 0.5);
+
+    --color-apsj-border-warning: rgb(160, 0, 0);
     --color-apsj-border-info: rgb(110, 150, 200);
     --color-apsj-border-note: rgb(246, 190, 7);
     --color-apsj-border-bonus: rgb(138, 211, 4);
@@ -202,6 +225,7 @@ a.content-link,
 a.inline-roll {
     font-family: var(--font-apsj-scalysans);
     font-weight: 700;
+    border: 1px solid var(--color-apsj-primary) !important;
     border-radius: 0.35em !important;
     background: linear-gradient(
         var(--color-apsj-background-light-0),
@@ -404,8 +428,8 @@ a.inline-roll i {
 }
 
 .panel.warning {
-    background: var(--color-apsj-background-primary);
-    border: 2px solid var(--color-apsj-border-primary);
+    background: var(--color-apsj-background-warning);
+    border: 2px solid var(--color-apsj-border-warning);
 }
 
 .panel.warning::before {
@@ -463,6 +487,14 @@ a.inline-roll i {
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0) !important;
 }
 
+.block.encounter {
+    border: 2px solid var(--color-apsj-primary);
+    border-radius: 0.5em;
+    background: url('../assets/parchment-bloody.webp') no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 3px var(--color-shadow-dark);
+}
+
 .block.magic-item {
     color: var(--color-apsj-light-0) !important;
     border: 2px solid var(--color-apsj-border-info) !important;
@@ -505,7 +537,6 @@ a.inline-roll i {
 .block.magic-item a.content-link i,
 .block.magic-item a.inline-roll i {
     color: var(--color-apsj-background-light-0) !important;
-    text-shadow: 1px 1px 2px var(--color-apsj-dark-0) !important;
 }
 
 .block.magic-item a:hover {
@@ -536,13 +567,6 @@ a.inline-roll i {
     content: '\f4ad';
 }
 
-.block.read-aloud a.entity-link,
-.block.read-aloud a.content-link,
-.block.read-aloud a.inline-roll {
-    border: 1px solid var(--color-apsj-primary) !important;
-    font-family: var(--font-apsj-scalysans) !important;
-}
-
 .red-overlay {
     margin: 0;
     padding: 10px;
@@ -565,8 +589,8 @@ a.inline-roll i {
     margin: 0;
     padding: 10px;
     background: linear-gradient(
-        var(--color-apsj-background-light-0),
-        var(--color-apsj-background-dark-4)
+        var(--color-apsj-background-light-50),
+        var(--color-apsj-background-dark-54)
     );
     border: 2px solid var(--color-apsj-primary);
     border-radius: 0.5em;

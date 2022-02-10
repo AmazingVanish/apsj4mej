@@ -191,6 +191,27 @@ Hooks.on('ready', () => {
 <p class="dnd-text"></p>`,
         },
         {
+            title: 'Block: Encounter',
+            description:
+                'A stylish block for displaying encounter data and descrptions.',
+            content: `
+<section class="block encounter">
+	<header><h1 class="dnd-title">Encounter!</h1></header>
+	<div class="block-contents">
+		<main class="light-overlay">
+			<h2 class="dnd-heading">Description</h2>
+			<p class="dnd-text">Enter a detailed description of the environment and scenario here to read to the players.</p>
+			<p class="dnd-text">Drag Actor tokens from your compendium into the Adversaries list on the right for easy setup of the encounter.</p>
+		</main>
+		<aside class="red-overlay">
+			<h2 class="dnd-heading">Adversaries</h2>
+			<p class="dnd-data"></p>
+		</aside>
+	</div>
+</section>
+<p class="dnd-text"></p>`,
+        },
+        {
             title: 'Block: Magic Item',
             description:
                 "A stylish block to display a magic item's description and stats.",
