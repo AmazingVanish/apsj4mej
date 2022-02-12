@@ -81,4 +81,4 @@ You can submit bugs via [Github Issues](https://github.com/AmazingVanish/apsj4me
 
 ## Contact Me
 
-Come hang out on my [my Discord server](https://discord.gg/ge9GJXDsM2) or [click here to send me an email](mailto:chris.vancleve@dscape-llc.com?subject=Arius%20Planeswalker's%20Stylish%20Journal%20for%20Monk's%20Enhanced%20Journal%20module%20for%20Foundry%20VTT).
+Come hang out on [my Discord server](https://discord.gg/ge9GJXDsM2) or [click here to send me an email](mailto:chris.vancleve@dscape-llc.com?subject=Arius%20Planeswalker's%20Stylish%20Journal%20for%20Monk's%20Enhanced%20Journal%20module%20for%20Foundry%20VTT).
