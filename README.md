@@ -32,6 +32,9 @@ You can find the new Panels and Blocks under the Templates button.
 
 ## Media
 
+![themes](https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/media/apsj4mej-themes.webp)
+_The available Color Themes_
+
 ![panels](https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/media/apsj4mej-panels.webp)
 _The available Panels_
 
