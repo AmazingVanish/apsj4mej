@@ -44,6 +44,9 @@ _The available Blocks_
 ![elements](https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/media/apsj4mej-elements.webp)
 _The available Element Styling_
 
+![mix-n-match](https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/media/apsj4mej-mix-n-match.webp)
+_An example of Mixing and Matching elements_
+
 ![toolbar](https://raw.github.com/AmazingVanish/apsj4mej/master/media/apsj4mej-toolbar.webp)
 _The new toolbar with added options_
 
