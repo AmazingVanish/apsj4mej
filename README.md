@@ -18,7 +18,7 @@ In the setup screen, use the URL `https://github.com/AmazingVanish/apsj4mej/rele
 
 ## Dependencies
 
--   [Monk's Enhanced Journal](https://www.foundryvtt-hub.com/package/monks-enhanced-journal/)
+- [Monk's Enhanced Journal](https://www.foundryvtt-hub.com/package/monks-enhanced-journal/)
 
 ## Usage
 
@@ -32,8 +32,14 @@ You can find the new Panels and Blocks under the Templates button.
 
 ## Media
 
-![screenshot](https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/media/apsj4mej-ss.webp)
-_Screenshot showing available stylings and templates_
+![panels](https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/media/apsj4mej-panels.webp)
+_The available Panels_
+
+![blocks](https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/media/apsj4mej-blocks.webp)
+_The available Blocks_
+
+![elements](https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/media/apsj4mej-elements.webp)
+_The available Element Styling_
 
 ![toolbar](https://raw.github.com/AmazingVanish/apsj4mej/master/media/apsj4mej-toolbar.webp)
 _The new toolbar with added options_
@@ -53,9 +59,9 @@ _Screenshot of an Encounter Entry_
 ![loot](https://raw.github.com/AmazingVanish/apsj4mej/master/media/apsj4mej-loot.webp)
 _Screenshot of a Loot Entry_
 
-## Known Issues
+## Credits
 
--   Font Awesome icons do not display in Edit Mode
+Border used on the cards from [Ornament Vectors by Vecteezy](https://www.vecteezy.com/free-vector/ornament)
 
 ## License
 
@@ -67,6 +73,6 @@ This package is under an [MIT license](LICENSE) and the [Foundry Virtual Tableto
 
 You can submit bugs via [Github Issues](https://github.com/AmazingVanish/apsj4mej/issues/new/choose) or on [my Discord server](https://discord.gg/ge9GJXDsM2) or use the :bug: Bug Report module to submit bugs in game.
 
-## Contact me
+## Contact Me
 
 Come hang out on my [my Discord server](https://discord.gg/ge9GJXDsM2) or [click here to send me an email](mailto:chris.vancleve@dscape-llc.com?subject=Arius%20Planeswalker's%20Stylish%20Journal%20for%20Monk's%20Enhanced%20Journal%20module%20for%20Foundry%20VTT).

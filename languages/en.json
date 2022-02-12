@@ -1,6 +1,12 @@
 {
     "APSJ4MEJ.menuEnableParchmentName": "Enable Parchment",
-    "APSJ4MEJ.menuEnableParchmentHint": "Replace the default white parchment background with a more aged, brownish look.",
-    "APSJ4MEJ.menuTitleSizeName": "Choose the default size of your Stylish Titles",
-    "APSJ4MEJ.menuHeadingSizeName": "Choose the default size of your Stylish Headings"
+    "APSJ4MEJ.menuEnableParchmentHint": "Replace the default white parchment background with a more aged, brownish-yellow look.",
+    "APSJ4MEJ.menuColorThemeName": "Color Theme",
+    "APSJ4MEJ.colorThemeBlue": "Blue",
+    "APSJ4MEJ.colorThemeCyan": "Cyan",
+    "APSJ4MEJ.colorThemeGreen": "Green",
+    "APSJ4MEJ.colorThemeOrange": "Orange",
+    "APSJ4MEJ.colorThemePurple": "Purple",
+    "APSJ4MEJ.colorThemeRed": "Red (Default)",
+    "APSJ4MEJ.colorThemeYellow": "Yellow"
 }

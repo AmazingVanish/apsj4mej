@@ -1,6 +1,6 @@
-/*
-  APSJ Variables
-*/
+/**
+* APSJ Custom Properties
+**/
 
 :root {
     --color-apsj-primary: rgb(128, 0, 0);
@@ -24,10 +24,14 @@
     --color-apsj-dark-1: rgb(17, 17, 17);
     --color-apsj-dark-0: rgb(0, 0, 0);
 
-    --color-apsj-background-warning: rgba(128, 0, 0, 0.75);
-    --color-apsj-background-info: rgba(57, 90, 150, 0.75);
+    --color-apsj-background-bonus: rgba(7, 103, 144, 0.75);
+    --color-apsj-background-effect: rgba(52, 26, 255, 0.75);
+    --color-apsj-background-info: rgba(18, 69, 170, 0.75);
+    --color-apsj-background-loot: rgba(0, 128, 0, 0.75);
     --color-apsj-background-note: rgba(214, 150, 0, 0.75);
-    --color-apsj-background-bonus: rgba(101, 155, 0, 0.75);
+    --color-apsj-background-trap: rgba(255, 128, 0, 0.75);
+    --color-apsj-background-warning: rgba(128, 0, 0, 0.75);
+
     --color-apsj-background-light-0: rgba(255, 255, 255, 0.75);
     --color-apsj-background-light-1: rgba(238, 238, 238, 0.75);
     --color-apsj-background-light-2: rgba(221, 221, 221, 0.75);
@@ -62,24 +66,67 @@
     --color-apsj-background-dark-51: rgba(17, 17, 17, 0.5);
     --color-apsj-background-dark-50: rgba(0, 0, 0, 0.5);
 
-    --color-apsj-border-warning: rgb(160, 0, 0);
-    --color-apsj-border-info: rgb(110, 150, 200);
+    --color-apsj-border-bonus: rgb(0, 136, 195);
+    --color-apsj-border-effect: rgb(120, 103, 255);
+    --color-apsj-border-info: rgb(1, 86, 255);
+    --color-apsj-border-loot: rgb(0, 192, 0);
     --color-apsj-border-note: rgb(246, 190, 7);
-    --color-apsj-border-bonus: rgb(138, 211, 4);
+    --color-apsj-border-trap: rgb(255, 160, 0);
+    --color-apsj-border-warning: rgb(160, 0, 0);
 
-    --font-apsj-modesto: 'Modesto Condensed', 'Palatino Linotype', serif;
-    --font-apsj-signika: 'Signika', sans-serif;
+    --font-apsj-awesome: 'FontAwesome';
     --font-apsj-book: 'BookInsanity', serif;
+    --font-apsj-modesto: 'Modesto Condensed', 'Palatino Linotype', serif;
     --font-apsj-mreaves: 'MrEaves', serif;
     --font-apsj-scalysans: 'ScalySans', sans-serif;
     --font-apsj-scalycaps: 'ScalySansCaps', sans-serif;
-    --font-apsj-awesome: 'Font Awesome 5 Free', serif;
+    --font-apsj-signika: 'Signika', sans-serif;
 }
 
-/*
-  D&D Look-alike Fonts
-  Credit: https://github.com/jonathonf/solbera-dnd-fonts
-*/
+/**
+* Color Themes
+**/
+
+:root.blue {
+    --color-apsj-primary: rgb(18, 69, 170);
+    --color-apsj-background-primary: rgba(18, 69, 170, 0.75);
+    --color-apsj-border-primary: rgb(1, 86, 255);
+}
+
+:root.cyan {
+    --color-apsj-primary: rgb(7, 103, 144);
+    --color-apsj-background-primary: rgba(7, 103, 144, 0.75);
+    --color-apsj-border-primary: rgb(0, 136, 195);
+}
+
+:root.green {
+    --color-apsj-primary: rgb(0, 128, 0);
+    --color-apsj-background-primary: rgba(0, 128, 0, 0.75);
+    --color-apsj-border-primary: rgb(0, 192, 0);
+}
+
+:root.orange {
+    --color-apsj-primary: rgb(192, 128, 0);
+    --color-apsj-background-primary: rgba(255, 128, 0, 0.75);
+    --color-apsj-border-primary: rgb(255, 160, 0);
+}
+
+:root.purple {
+    --color-apsj-primary: rgb(52, 26, 255);
+    --color-apsj-background-primary: rgba(52, 26, 255, 0.75);
+    --color-apsj-border-primary: rgb(120, 103, 255);
+}
+
+:root.yellow {
+    --color-apsj-primary: rgb(214, 150, 0);
+    --color-apsj-background-primary: rgba(214, 150, 0, 0.75);
+    --color-apsj-border-primary: rgb(246, 190, 7);
+}
+
+/**
+* D&D Look-alike Fonts
+* Credit: https://github.com/jonathonf/solbera-dnd-fonts
+**/
 
 @font-face {
     font-family: 'BookInsanity';
@@ -174,13 +221,21 @@
     font-style: italic;
 }
 
-/*
-  Core Style Overrides
-*/
+/**
+* Font Awesome 5 Free
+* Included with Foundry VTT but apparently it can't be referenced from with a TinyMCE editor
+**/
 
-/* .window-app .window-content {
-    background-image: url(../assets/parchment-medium.webp) !important;
-} */
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/FontAwesome/fa-solid-900.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/**
+* Core Style Overrides
+**/
 
 .editor-content table tbody tr td {
     padding: 0 15px;
@@ -209,13 +264,13 @@ table {
 }
 
 table thead {
-    background-color: var(--color-apsj-background-primary) !important;
+    background: var(--color-apsj-background-primary) !important;
     font-family: var(--font-apsj-scalycaps);
     font-weight: 700;
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
 }
 
-td {
+tbody tr td {
     font-family: var(--font-apsj-scalysans);
     font-weight: 400;
 }
@@ -239,9 +294,9 @@ a.inline-roll i {
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
 }
 
-/*
- Monk's Enhanced Journal Style Overrides
-*/
+/**
+* Monk's Enhanced Journal Overrides
+**/
 
 .monks-journal-sheet .header-name {
     font-family: var(--font-apsj-modesto);
@@ -321,7 +376,7 @@ a.inline-roll i {
 .dnd5e .monks-enhanced-journal .tab-bar .journal-tab.active:hover,
 .dnd5e .monks-journal-sheet .journal-subsheet .encounter-buttons > div:hover {
     color: var(--color-apsj-light-3) !important;
-    background: rgb(192, 0, 0) !important;
+    background: var(--color-apsj-border-primary) !important;
     border: 1px solid var(--color-apsj-light-3) !important;
 }
 
@@ -332,7 +387,7 @@ a.inline-roll i {
 }
 
 .dnd5e #journal-directory li.journalentry {
-    border-top: 1px solid rgb(192, 0, 0) !important;
+    border-top: 1px solid var(--color-apsj-border-primary) !important;
     border-bottom: 1px solid var(--color-apsj-primary) !important;
     color: var(--color-apsj-dark) !important;
 }
@@ -344,9 +399,9 @@ a.inline-roll i {
     color: var(--color-apsj-light-3) !important;
 }
 
-/*
-  Stylish Text Styles
-  */
+/**
+* Stylish Text Styles
+**/
 
 .dnd-title {
     font-family: var(--font-apsj-modesto) !important;
@@ -370,6 +425,7 @@ a.inline-roll i {
     font-family: var(--font-apsj-scalycaps) !important;
     font-weight: 700 !important;
     font-size: 14pt !important;
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
 }
 
 .dnd-text {
@@ -378,9 +434,9 @@ a.inline-roll i {
     font-size: 12pt !important;
 }
 
-/*
-  Stylish Templates: Panels
- */
+/**
+* Stylish Templates: Panels
+**/
 
 .panel {
     width: 90%;
@@ -392,48 +448,18 @@ a.inline-roll i {
     box-shadow: 0 0 5px var(--color-apsj-dark-0);
     color: var(--color-apsj-light-0);
     list-style: none;
+    font-family: var(--font-apsj-awesome);
+    font-weight: 900;
 }
 
 .panel::before {
     position: relative;
-    font-family: var(--font-apsj-awesome);
-    font-weight: 900;
     margin-right: 8px;
     float: left;
 }
 
 .panel header {
     margin: 0;
-    font-family: var(--font-apsj-scalycaps);
-    font-weight: 400;
-    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
-}
-
-.panel.info {
-    background: var(--color-apsj-background-info);
-    border: 2px solid var(--color-apsj-border-info);
-}
-
-.panel.info::before {
-    content: '\f05a';
-}
-
-.panel.note {
-    background: var(--color-apsj-background-note);
-    border: 2px solid var(--color-apsj-border-note);
-}
-
-.panel.note::before {
-    content: '\f044';
-}
-
-.panel.warning {
-    background: var(--color-apsj-background-warning);
-    border: 2px solid var(--color-apsj-border-warning);
-}
-
-.panel.warning::before {
-    content: '\f06a';
 }
 
 .panel.bonus {
@@ -445,9 +471,63 @@ a.inline-roll i {
     content: '\f559';
 }
 
-/*
-  Stylish Templates: Blocks
- */
+.panel.effect {
+    background: var(--color-apsj-background-effect);
+    border: 2px solid var(--color-apsj-border-effect);
+}
+
+.panel.effect::before {
+    content: '\f0d0';
+}
+
+.panel.info {
+    background: var(--color-apsj-background-info);
+    border: 2px solid var(--color-apsj-border-info);
+}
+
+.panel.info::before {
+    content: '\f05a';
+}
+
+.panel.loot {
+    background: var(--color-apsj-background-loot);
+    border: 2px solid var(--color-apsj-border-loot);
+}
+
+.panel.loot::before {
+    content: '\f51e';
+}
+
+.panel.note {
+    background: var(--color-apsj-background-note);
+    border: 2px solid var(--color-apsj-border-note);
+}
+
+.panel.note::before {
+    content: '\f044';
+}
+
+.panel.trap {
+    background: var(--color-apsj-background-trap);
+    border: 2px solid var(--color-apsj-border-trap);
+}
+
+.panel.trap::before {
+    content: '\f78c';
+}
+
+.panel.warning {
+    background: var(--color-apsj-background-warning);
+    border: 2px solid var(--color-apsj-border-warning);
+}
+
+.panel.warning::before {
+    content: '\f06a';
+}
+
+/**
+* Stylish Templates: Blocks
+**/
 
 .block {
     margin: 1em 5%;
@@ -487,12 +567,75 @@ a.inline-roll i {
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0) !important;
 }
 
+.block.deck-card {
+    color: var(--color-apsj-light-0) !important;
+    border: 2px solid rgb(120, 103, 255) !important;
+    border-radius: 0.5em;
+    background: url('../assets/deck-stars.webp') no-repeat center;
+    background-size: cover;
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
+}
+
+.apsj-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../assets/Cards.webp) no-repeat center;
+    min-height: 270px;
+    min-width: 270px;
+}
+
+.block.deck-card img {
+    border: none !important;
+    height: 100px;
+    width: auto;
+}
+
+.block.deck-card h1,
+.block.deck-card h2,
+.block.deck-card h3,
+.block.deck-card h4,
+.block.deck-card h5,
+.block.deck-card h6 {
+    color: var(--color-apsj-light-0) !important;
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0) !important;
+    border-bottom: 2px solid rgb(120, 103, 255) !important;
+}
+
+.block.deck-card .dnd-text {
+    color: var(--color-apsj-light-0) !important;
+}
+
+.block.deck-card hr {
+    color: var(--color-apsj-border-info) !important;
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0) !important;
+    border-bottom: 2px solid rgb(120, 103, 255) !important;
+}
+
+.block.deck-card a.entity-link,
+.block.deck-card a.content-link,
+.block.deck-card a.inline-roll {
+    color: var(--color-apsj-light-0) !important;
+    border: 1px solid rgb(120, 103, 255) !important;
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0) !important;
+}
+
+.block.deck-card a.entity-link i,
+.block.deck-card a.content-link i,
+.block.deck-card a.inline-roll i {
+    color: var(--color-apsj-background-light-0) !important;
+}
+
+.block.deck-card a:hover {
+    text-shadow: 0 0 8px var(--color-apsj-border-info) !important;
+}
+
 .block.encounter {
-    border: 2px solid var(--color-apsj-primary);
+    border: 2px solid var(--color-apsj-border-warning);
     border-radius: 0.5em;
     background: url('../assets/parchment-bloody.webp') no-repeat;
     background-size: cover;
-    box-shadow: 0 0 3px var(--color-shadow-dark);
+    box-shadow: 0 0 3px var(--color-apsj-dark-0);
 }
 
 .block.magic-item {
@@ -544,7 +687,7 @@ a.inline-roll i {
 }
 
 .block.read-aloud {
-    border: 2px solid var(--color-apsj-primary) !important;
+    border: 2px solid var(--color-apsj-primary);
     border-radius: 0.5em;
     background: linear-gradient(
         var(--color-apsj-background-light-0),
@@ -554,24 +697,31 @@ a.inline-roll i {
 }
 
 .ra-icon {
-    float: left !important;
-    margin: 0 8px 0 -30px !important;
+    float: left;
+    margin: 0 8px 0 -30px;
 }
 
 .ra-icon::before {
     font-family: var(--font-apsj-awesome);
     font-weight: 900;
     font-size: xxx-large;
-    color: var(--color-apsj-primary);
+    color: var(--color-apsj-border-primary);
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
     content: '\f4ad';
 }
 
+/**
+* Overlays
+**/
+
 .red-overlay {
     margin: 0;
     padding: 10px;
-    background: linear-gradient(rgba(255, 0, 0, 0.75), rgba(124, 0, 0, 0.75));
-    border: 2px solid var(--color-apsj-primary);
+    background: linear-gradient(
+        var(--color-apsj-border-warning),
+        var(--color-apsj-background-warning)
+    );
+    border: 2px solid var(--color-apsj-border-warning);
     border-radius: 0.5em;
     box-shadow: 0 0 5px var(--color-apsj-dark-0);
 }
@@ -579,7 +729,10 @@ a.inline-roll i {
 .blue-overlay {
     margin: 0;
     padding: 10px;
-    background: linear-gradient(rgba(6, 68, 180, 0.75), rgba(0, 40, 103, 0.75));
+    background: linear-gradient(
+        var(--color-apsj-border-info),
+        var(--color-apsj-background-info)
+    );
     border: 2px solid var(--color-apsj-border-info);
     border-radius: 0.5em;
     box-shadow: 0 0 5px var(--color-apsj-dark-0);

@@ -1,7 +1,17 @@
+/**
+ * Safe window reload after settings changes
+ **/
+
 const debouncedReload = foundry.utils.debounce(
     () => window.location.reload(),
     100
 );
+
+/**
+ * Change to the selected theme in settings
+ **/
+
+const setTheme = (theme) => (document.documentElement.className = theme);
 
 Hooks.on('init', () => {
     game.settings.register('apsj4mej', 'apsj4mejEnableParchment', {
@@ -14,39 +24,23 @@ Hooks.on('init', () => {
         onChange: debouncedReload,
     });
 
-    // game.settings.register('apsj', 'apsjTitleSize', {
-    //     name: game.i18n.format('APSJ.menuTitleSizeName'),
-    //     scope: 'world',
-    //     config: true,
-    //     type: String,
-    //     default: '48',
-    //     choices: {
-    //         '8': '8',
-    //         '10': '10',
-    //         '12': '12',
-    //         '14': '14',
-    //         '18': '18',
-    //         '24': '24',
-    //         '36': '36',
-    //     },
-    // });
-
-    // game.settings.register('apsj', 'apsjHeadingSize', {
-    //     name: game.i18n.format('APSJ.menuHeadingSizeName'),
-    //     scope: 'world',
-    //     config: true,
-    //     type: String,
-    //     default: '36',
-    //     choices: {
-    //         '8': '8',
-    //         '10': '10',
-    //         '12': '12',
-    //         '14': '14',
-    //         '18': '18',
-    //         '24': '24',
-    //         '36': '36',
-    //     },
-    // });
+    game.settings.register('apsj4mej', 'apsj4mejColorTheme', {
+        name: game.i18n.format('APSJ4MEJ.menuColorThemeName'),
+        scope: 'client',
+        config: true,
+        default: 'red',
+        type: String,
+        choices: {
+            blue: game.i18n.format('APSJ4MEJ.colorThemeBlue'),
+            cyan: game.i18n.format('APSJ4MEJ.colorThemeCyan'),
+            green: game.i18n.format('APSJ4MEJ.colorThemeGreen'),
+            orange: game.i18n.format('APSJ4MEJ.colorThemeOrange'),
+            purple: game.i18n.format('APSJ4MEJ.colorThemePurple'),
+            red: game.i18n.format('APSJ4MEJ.colorThemeRed'),
+            yellow: game.i18n.format('APSJ4MEJ.colorThemeYellow'),
+        },
+        onChange: debouncedReload,
+    });
 
     CONFIG.TinyMCE.plugins =
         ' advlist lists anchor searchreplace textpattern template image table hr code save link';
@@ -114,27 +108,50 @@ Hooks.on('ready', () => {
         }
     }
 
+    switch (game.settings.get('apsj4mej', 'apsj4mejColorTheme')) {
+        case 'blue':
+            setTheme('blue');
+            break;
+        case 'cyan':
+            setTheme('cyan');
+            break;
+        case 'green':
+            setTheme('green');
+            break;
+        case 'orange':
+            setTheme('orange');
+            break;
+        case 'purple':
+            setTheme('purple');
+            break;
+        case 'yellow':
+            setTheme('yellow');
+            break;
+        default:
+            setTheme('red');
+    }
+
     CONFIG.TinyMCE.style_formats.push({
         title: 'Stylish Text',
         items: [
             {
                 title: 'Stylish Heading (Title)',
-                selector: 'h1,h2,h3,h4,h5,h6,th',
+                selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                 classes: 'dnd-title',
             },
             {
                 title: 'Stylish Heading',
-                selector: 'h1,h2,h3,h4,h5,h6,th',
+                selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                 classes: 'dnd-heading',
             },
             {
                 title: 'Stylish Data',
-                selector: 'h1,h2,h3,h4,h5,h6,th',
+                selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                 classes: 'dnd-data',
             },
             {
                 title: 'Stylish Paragraph',
-                selector: 'p,td',
+                selector: 'td,p',
                 classes: 'dnd-text',
             },
         ],
@@ -143,52 +160,109 @@ Hooks.on('ready', () => {
     CONFIG.TinyMCE.templates = CONFIG.TinyMCE.templates ?? [];
     CONFIG.TinyMCE.templates.push(
         {
+            title: 'Panel: Bonus',
+            description: 'A stylish panel to provide a Bonus message.',
+            content: `
+<section class="panel bonus">
+	<header class="dnd-panel-heading">Bonus Panel</header>
+	<main>
+		<p class="dnd-data">The body of the Bonus message.</p>
+	</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: 'Panel: Effect',
+            description: 'A stylish panel to provide an Effect message.',
+            content: `
+<section class="panel effect">
+	<header class="dnd-panel-heading">Effect Panel</header>
+	<main>
+		<p class="dnd-data">The body of the Effect message.</p>
+	</main>
+</section>
+<p></p>`,
+        },
+        {
             title: 'Panel: Information',
-            description: 'A stylish panel to provide an informational message.',
+            description: 'A stylish panel to provide an Informational message.',
             content: `
 <section class="panel info">
-	<header class="dnd-panel-heading">Information Heading</header>
+	<header class="dnd-panel-heading">Information Panel</header>
 	<main>
 		<p class="dnd-data">The body of the Informational Message.</p>
 	</main>
 </section>
-<p class="dnd-text"></p>`,
+<p></p>`,
+        },
+        {
+            title: 'Panel: Loot',
+            description: 'A stylish panel to provide a Loot message.',
+            content: `
+<section class="panel loot">
+	<header class="dnd-panel-heading">Loot Panel</header>
+	<main>
+		<p class="dnd-data">The body of the Loot Message.</p>
+	</main>
+</section>
+<p></p>`,
         },
         {
             title: 'Panel: Note',
-            description: 'A stylish panel to provide a note.',
+            description: 'A stylish panel to provide a Note.',
             content: `
 <section class="panel note">
-	<header class="dnd-panel-heading">Note Heading</header>
+	<header class="dnd-panel-heading">Note Panel</header>
 	<main>
 		<p class="dnd-data">The body of the Note.</p>
 	</main>
 </section>
-<p class="dnd-text"></p>`,
+<p></p>`,
+        },
+        {
+            title: 'Panel: Trap',
+            description: 'A stylish panel to provide a Trap message.',
+            content: `
+<section class="panel trap">
+	<header class="dnd-panel-heading">Trap Panel</header>
+	<main>
+		<p class="dnd-data">The body of the Trap message.</p>
+	</main>
+</section>
+<p></p>`,
         },
         {
             title: 'Panel: Warning',
-            description: 'A stylish panel to provide a warning message.',
+            description: 'A stylish panel to provide a Warning message.',
             content: `
 <section class="panel warning">
-	<header class="dnd-panel-heading">Warning Heading</header>
+	<header class="dnd-panel-heading">Warning Panel</header>
 	<main>
 		<p class="dnd-data">The body of the Warning message.</p>
 	</main>
 </section>
-<p class="dnd-text"></p>`,
+<p></p>`,
         },
         {
-            title: 'Panel: Bonus',
-            description: 'A stylish panel to provide an Bonus message.',
+            title: 'Block: Deck Card',
+            description:
+                'A stylish block to display the description and stats of a card from a deck.',
             content: `
-<section class="panel bonus">
-	<header class="dnd-panel-heading">Bonus Heading</header>
-	<main>
-		<p class="dnd-data">The body of the Bnus message.</p>
-	</main>
+<section class="block deck-card">
+	<div class="block-contents">
+		<aside class="apsj-card">
+			<p></p>
+		</aside>
+		<main>
+			<header>
+				<h1 class="dnd-title">Card Name</h1>
+			</header>
+			<p class="dnd-text">Description of the card and its effects.</p>
+			<p class="dnd-text">You can place an image on top of the card to the left and it will automatically be sized to fit the card.</p>
+		</main>
+	</div>
 </section>
-<p class="dnd-text"></p>`,
+<p></p>`,
         },
         {
             title: 'Block: Encounter',
@@ -209,7 +283,7 @@ Hooks.on('ready', () => {
 		</aside>
 	</div>
 </section>
-<p class="dnd-text"></p>`,
+<p></p>`,
         },
         {
             title: 'Block: Magic Item',
@@ -234,7 +308,7 @@ Hooks.on('ready', () => {
 		</aside>
 	</div>
 </section>
-<p class="dnd-text"></p>`,
+<p></p>`,
         },
         {
             title: 'Block: Read Aloud',
@@ -247,7 +321,7 @@ Hooks.on('ready', () => {
 		<p class="dnd-text">Flavor text to read aloud to the players.</p>
 	</main>
 </section>
-<p class="dnd-text"></p>`,
+<p></p>`,
         }
     );
 });
