@@ -1,5 +1,19 @@
 # RELEASE NOTES
 
+## 2.1.0 - Translations
+
+### ADDED
+
+- French translation
+- German translation
+- Spanish translation
+- Data HEading text style
+
+### CHANGED
+
+- English translation supdated
+- MOAR Translated phrases. Everything shoud be i18n now.
+
 ## 2.0.0 - Themes
 
 ### ADDED

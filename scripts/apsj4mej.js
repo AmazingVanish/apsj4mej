@@ -139,27 +139,27 @@ Hooks.on('ready', () => {
         title: 'Stylish Text',
         items: [
             {
-                title: game.i18n.format('AOSJ4MEJ.textHeadingTitleName'),
+                title: game.i18n.format('APSJ4MEJ.textHeadingTitleName'),
                 selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                 classes: 'dnd-title',
             },
             {
-                title: game.i18n.format('AOSJ4MEJ.textHeadingName'),
+                title: game.i18n.format('APSJ4MEJ.textHeadingName'),
                 selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                 classes: 'dnd-heading',
             },
             {
-                title: game.i18n.format('AOSJ4MEJ.textDataHeadingName'),
+                title: game.i18n.format('APSJ4MEJ.textDataHeadingName'),
                 selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                 classes: 'dnd-data-heading',
             },
             {
-                title: game.i18n.format('AOSJ4MEJ.textDataName'),
+                title: game.i18n.format('APSJ4MEJ.textDataName'),
                 selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                 classes: 'dnd-data',
             },
             {
-                title: game.i18n.format('AOSJ4MEJ.textParagraphName'),
+                title: game.i18n.format('APSJ4MEJ.textParagraphName'),
                 selector: 'td,p',
                 classes: 'dnd-text',
             },
