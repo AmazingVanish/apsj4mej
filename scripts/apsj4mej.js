@@ -31,6 +31,7 @@ Hooks.on('init', () => {
         default: 'red',
         type: String,
         choices: {
+            none: game.i18n.format('APSJ4MEJ.colorThemeNone'),
             blue: game.i18n.format('APSJ4MEJ.colorThemeBlue'),
             cyan: game.i18n.format('APSJ4MEJ.colorThemeCyan'),
             green: game.i18n.format('APSJ4MEJ.colorThemeGreen'),
@@ -109,6 +110,9 @@ Hooks.on('ready', () => {
     }
 
     switch (game.settings.get('apsj4mej', 'apsj4mejColorTheme')) {
+        case 'none':
+            setTheme('none');
+            break;
         case 'blue':
             setTheme('blue');
             break;
@@ -135,22 +139,27 @@ Hooks.on('ready', () => {
         title: 'Stylish Text',
         items: [
             {
-                title: 'Stylish Heading (Title)',
+                title: game.i18n.format('AOSJ4MEJ.textHeadingTitleName'),
                 selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                 classes: 'dnd-title',
             },
             {
-                title: 'Stylish Heading',
+                title: game.i18n.format('AOSJ4MEJ.textHeadingName'),
                 selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                 classes: 'dnd-heading',
             },
             {
-                title: 'Stylish Data',
+                title: game.i18n.format('AOSJ4MEJ.textDataHeadingName'),
+                selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
+                classes: 'dnd-data-heading',
+            },
+            {
+                title: game.i18n.format('AOSJ4MEJ.textDataName'),
                 selector: 'h1,h2,h3,h4,h5,h6,th,td,p',
                 classes: 'dnd-data',
             },
             {
-                title: 'Stylish Paragraph',
+                title: game.i18n.format('AOSJ4MEJ.textParagraphName'),
                 selector: 'td,p',
                 classes: 'dnd-text',
             },
@@ -160,94 +169,131 @@ Hooks.on('ready', () => {
     CONFIG.TinyMCE.templates = CONFIG.TinyMCE.templates ?? [];
     CONFIG.TinyMCE.templates.push(
         {
-            title: 'Panel: Bonus',
-            description: 'A stylish panel to provide a Bonus message.',
-            content: `
+            title: game.i18n.format('APSJ4MEJ.panelBonusName'),
+            description: game.i18n.format('APSJ4MEJ.panelBonusDescription'),
+            content:
+                `
 <section class="panel bonus">
-	<header class="dnd-panel-heading">Bonus Panel</header>
+	<header class="dnd-panel-heading">` +
+                game.i18n.format('APSJ4MEJ.panelBonusHeading') +
+                `</header>
 	<main>
-		<p class="dnd-data">The body of the Bonus message.</p>
+		<p class="dnd-data">` +
+                game.i18n.format('APSJ4MEJ.panelBody') +
+                `</p>
 	</main>
 </section>
 <p></p>`,
         },
         {
-            title: 'Panel: Effect',
-            description: 'A stylish panel to provide an Effect message.',
-            content: `
+            title: game.i18n.format('APSJ4MEJ.panelEffectName'),
+            description: game.i18n.format('APSJ4MEJ.panelEffectDescription'),
+            content:
+                `
 <section class="panel effect">
-	<header class="dnd-panel-heading">Effect Panel</header>
+	<header class="dnd-panel-heading">` +
+                game.i18n.format('APSJ4MEJ.panelEffectHeading') +
+                `</header>
 	<main>
-		<p class="dnd-data">The body of the Effect message.</p>
+		<p class="dnd-data">` +
+                game.i18n.format('APSJ4MEJ.panelBody') +
+                `</p>
 	</main>
 </section>
 <p></p>`,
         },
         {
-            title: 'Panel: Information',
-            description: 'A stylish panel to provide an Informational message.',
-            content: `
+            title: game.i18n.format('APSJ4MEJ.panelInformationName'),
+            description: game.i18n.format(
+                'APSJ4MEJ.panelInformationDescription'
+            ),
+            content:
+                `
 <section class="panel info">
-	<header class="dnd-panel-heading">Information Panel</header>
+	<header class="dnd-panel-heading">` +
+                game.i18n.format('APSJ4MEJ.panelInformationHeading') +
+                `</header>
 	<main>
-		<p class="dnd-data">The body of the Informational Message.</p>
+		<p class="dnd-data">` +
+                game.i18n.format('APSJ4MEJ.panelBody') +
+                `</p>
 	</main>
 </section>
 <p></p>`,
         },
         {
-            title: 'Panel: Loot',
-            description: 'A stylish panel to provide a Loot message.',
-            content: `
+            title: game.i18n.format('APSJ4MEJ.panelLootName'),
+            description: game.i18n.format('APSJ4MEJ.panelLootDescription'),
+            content:
+                `
 <section class="panel loot">
-	<header class="dnd-panel-heading">Loot Panel</header>
+	<header class="dnd-panel-heading">` +
+                game.i18n.format('APSJ4MEJ.panelLootHeading') +
+                `</header>
 	<main>
-		<p class="dnd-data">The body of the Loot Message.</p>
+		<p class="dnd-data">` +
+                game.i18n.format('APSJ4MEJ.panelBody') +
+                `</p>
 	</main>
 </section>
 <p></p>`,
         },
         {
-            title: 'Panel: Note',
-            description: 'A stylish panel to provide a Note.',
-            content: `
+            title: game.i18n.format('APSJ4MEJ.panelNoteName'),
+            description: game.i18n.format('APSJ4MEJ.panelNoteDescription'),
+            content:
+                `
 <section class="panel note">
-	<header class="dnd-panel-heading">Note Panel</header>
+	<header class="dnd-panel-heading">` +
+                game.i18n.format('APSJ4MEJ.panelNoteHeading') +
+                `</header>
 	<main>
-		<p class="dnd-data">The body of the Note.</p>
+		<p class="dnd-data">` +
+                game.i18n.format('APSJ4MEJ.panelBody') +
+                `</p>
 	</main>
 </section>
 <p></p>`,
         },
         {
-            title: 'Panel: Trap',
-            description: 'A stylish panel to provide a Trap message.',
-            content: `
+            title: game.i18n.format('APSJ4MEJ.panelTrapName'),
+            description: game.i18n.format('APSJ4MEJ.panelTrapDescription'),
+            content:
+                `
 <section class="panel trap">
-	<header class="dnd-panel-heading">Trap Panel</header>
+	<header class="dnd-panel-heading">` +
+                game.i18n.format('APSJ4MEJ.panelTrapHeading') +
+                `</header>
 	<main>
-		<p class="dnd-data">The body of the Trap message.</p>
+		<p class="dnd-data">` +
+                game.i18n.format('APSJ4MEJ.panelBody') +
+                `</p>
 	</main>
 </section>
 <p></p>`,
         },
         {
-            title: 'Panel: Warning',
-            description: 'A stylish panel to provide a Warning message.',
-            content: `
+            title: game.i18n.format('APSJ4MEJ.panelWarningName'),
+            description: game.i18n.format('APSJ4MEJ.panelWarningDescription'),
+            content:
+                `
 <section class="panel warning">
-	<header class="dnd-panel-heading">Warning Panel</header>
+	<header class="dnd-panel-heading">` +
+                game.i18n.format('APSJ4MEJ.panelWarningHeading') +
+                `</header>
 	<main>
-		<p class="dnd-data">The body of the Warning message.</p>
+		<p class="dnd-data">` +
+                game.i18n.format('APSJ4MEJ.panelBody') +
+                `</p>
 	</main>
 </section>
 <p></p>`,
         },
         {
-            title: 'Block: Deck Card',
-            description:
-                'A stylish block to display the description and stats of a card from a deck.',
-            content: `
+            title: game.i18n.format('APSJ4MEJ.blockCardName'),
+            description: game.i18n.format('APSJ4MEJ.blockCardDescription'),
+            content:
+                `
 <section class="block deck-card">
 	<div class="block-contents">
 		<aside class="apsj-card">
@@ -255,30 +301,36 @@ Hooks.on('ready', () => {
 		</aside>
 		<main>
 			<header>
-				<h1 class="dnd-title">Card Name</h1>
-			</header>
-			<p class="dnd-text">Description of the card and its effects.</p>
-			<p class="dnd-text">You can place an image on top of the card to the left and it will automatically be sized to fit the card.</p>
-		</main>
+				<h1 class="dnd-title">` +
+                game.i18n.format('APSJ4MEJ.blockCardHeading') +
+                `</h1>
+			</header>` +
+                game.i18n.format('APSJ4MEJ.blockCardBody') +
+                `</main>
 	</div>
 </section>
 <p></p>`,
         },
         {
-            title: 'Block: Encounter',
-            description:
-                'A stylish block for displaying encounter data and descrptions.',
-            content: `
+            title: game.i18n.format('APSJ4MEJ.blockEncounterName'),
+            description: game.i18n.format('APSJ4MEJ.blockEncounterDescription'),
+            content:
+                `
 <section class="block encounter">
-	<header><h1 class="dnd-title">Encounter!</h1></header>
+	<header><h1 class="dnd-title">` +
+                game.i18n.format('APSJ4MEJ.blockEncounterHeading') +
+                `</h1></header>
 	<div class="block-contents">
 		<main class="light-overlay">
-			<h2 class="dnd-heading">Description</h2>
-			<p class="dnd-text">Enter a detailed description of the environment and scenario here to read to the players.</p>
-			<p class="dnd-text">Drag Actor tokens from your compendium into the Adversaries list on the right for easy setup of the encounter.</p>
-		</main>
+			<h2 class="dnd-heading">` +
+                game.i18n.format('APSJ4MEJ.blockDescription') +
+                `</h2>` +
+                game.i18n.format('APSJ4MEJ.blockEncounterBody') +
+                `</main>
 		<aside class="red-overlay">
-			<h2 class="dnd-heading">Adversaries</h2>
+			<h2 class="dnd-heading black-border">` +
+                game.i18n.format('APSJ4MEJ.blockAdversaries') +
+                `</h2>
 			<p class="dnd-data"></p>
 		</aside>
 	</div>
@@ -286,22 +338,27 @@ Hooks.on('ready', () => {
 <p></p>`,
         },
         {
-            title: 'Block: Magic Item',
-            description:
-                "A stylish block to display a magic item's description and stats.",
-            content: `
+            title: game.i18n.format('APSJ4MEJ.blockMagicItemName'),
+            description: game.i18n.format('APSJ4MEJ.blockMagicItemDescription'),
+            content:
+                `
 <section class="block magic-item">
 	<header>
-		<h1 class="dnd-title">Magic Item Name</h1>
+		<h1 class="dnd-title">` +
+                game.i18n.format('APSJ4MEJ.blockMagicItemHeading') +
+                `</h1>
 	</header>
 	<div class="block-contents">
 		<main>
-			<h2 class="dnd-heading">Description</h2>
-			<p class="dnd-text">Description of the item and its abilities.</p>
-			<p class="dnd-text">Place Stats in the aside to the right, and a link to the item below the divider.</p>
-		</main>
+			<h2 class="dnd-heading">` +
+                game.i18n.format('APSJ4MEJ.blockDescription') +
+                `</h2>` +
+                game.i18n.format('APSJ4MEJ.blockMagicItemBody') +
+                `</main>
 		<aside class="blue-overlay">
-			<h2 class="dnd-heading">Stats</h2>
+			<h2 class="dnd-heading">` +
+                game.i18n.format('APSJ4MEJ.blockStats') +
+                `</h2>
 			<p class="dnd-data"></p>
 			<hr>
 			<p class="dnd-data"></p>
@@ -311,15 +368,15 @@ Hooks.on('ready', () => {
 <p></p>`,
         },
         {
-            title: 'Block: Read Aloud',
-            description:
-                'A stylish block to denote flavor text to be read aloud to the players.',
-            content: `
+            title: game.i18n.format('APSJ4MEJ.blockReadAloudName'),
+            description: game.i18n.format('APSJ4MEJ.blockReadAloudDescription'),
+            content:
+                `
 <section class="block read-aloud">
 	<main>
-		<div class="ra-icon"></div>
-		<p class="dnd-text">Flavor text to read aloud to the players.</p>
-	</main>
+		<div class="ra-icon"></div>` +
+                game.i18n.format('APSJ4MEJ.blockReadAloudBody') +
+                `</main>
 </section>
 <p></p>`,
         }

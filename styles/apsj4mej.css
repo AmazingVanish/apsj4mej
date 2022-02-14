@@ -105,6 +105,12 @@
     --color-apsj-border-primary: rgb(0, 192, 0);
 }
 
+:root.none {
+    --color-apsj-primary: rgb(0, 0, 0);
+    --color-apsj-background-primary: rgba(255, 255, 255, 0);
+    --color-apsj-border-primary: rgb(255, 255, 255);
+}
+
 :root.orange {
     --color-apsj-primary: rgb(192, 128, 0);
     --color-apsj-background-primary: rgba(255, 128, 0, 0.75);
@@ -415,10 +421,20 @@ a.inline-roll i {
     font-size: 24pt !important;
 }
 
+.black-border {
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
 .dnd-data {
     font-family: var(--font-apsj-scalysans) !important;
     font-weight: 700 !important;
     font-size: 10pt !important;
+}
+
+.dnd-data-heading {
+    font-family: var(--font-apsj-scalycaps) !important;
+    font-weight: 700 !important;
+    font-size: 18pt !important;
 }
 
 .dnd-panel-heading {

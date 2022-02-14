@@ -27,6 +27,21 @@
             "lang": "en",
             "name": "English",
             "path": "languages/en.json"
+        },
+        {
+            "lang": "fr",
+            "name": "French (Français)",
+            "path": "languages/fr.json"
+        },
+        {
+            "lang": "de",
+            "name": "German (Deutsch)",
+            "path": "languages/de.json"
+        },
+        {
+            "lang": "es",
+            "name": "Spanish (Español)",
+            "path": "languages/es.json"
         }
     ],
     "url": "This is auto replaced",
