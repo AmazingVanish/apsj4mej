@@ -8,9 +8,8 @@ const debouncedReload = foundry.utils.debounce(
 );
 
 /**
- * Change to the selected theme in settings
+ * Change to the selected theme in local storage
  **/
-
 const setTheme = (theme) => (document.documentElement.className = theme);
 
 Hooks.on('init', () => {
@@ -24,24 +23,15 @@ Hooks.on('init', () => {
         onChange: debouncedReload,
     });
 
-    game.settings.register('apsj4mej', 'apsj4mejColorTheme', {
-        name: game.i18n.format('APSJ4MEJ.menuColorThemeName'),
-        scope: 'client',
-        config: true,
-        default: 'red',
-        type: String,
-        choices: {
-            none: game.i18n.format('APSJ4MEJ.colorThemeNone'),
-            blue: game.i18n.format('APSJ4MEJ.colorThemeBlue'),
-            cyan: game.i18n.format('APSJ4MEJ.colorThemeCyan'),
-            green: game.i18n.format('APSJ4MEJ.colorThemeGreen'),
-            orange: game.i18n.format('APSJ4MEJ.colorThemeOrange'),
-            purple: game.i18n.format('APSJ4MEJ.colorThemePurple'),
-            red: game.i18n.format('APSJ4MEJ.colorThemeRed'),
-            yellow: game.i18n.format('APSJ4MEJ.colorThemeYellow'),
-        },
-        onChange: debouncedReload,
-    });
+    let theme = localStorage.getItem('apsj-theme');
+
+    if (theme) {
+        setTheme(theme);
+    } else if (game.settings.get('apsj4mej', 'apsj4mejColorTheme')) {
+        setTheme(game.settings.get('apsj4mej', 'apsj4mejColorTheme'));
+    } else {
+        setTheme('red');
+    }
 
     CONFIG.TinyMCE.plugins =
         ' advlist lists anchor searchreplace textpattern template image table hr code save link';
@@ -107,32 +97,6 @@ Hooks.on('ready', () => {
         if (innerHTML != '') {
             document.querySelector('head').appendChild(style);
         }
-    }
-
-    switch (game.settings.get('apsj4mej', 'apsj4mejColorTheme')) {
-        case 'none':
-            setTheme('none');
-            break;
-        case 'blue':
-            setTheme('blue');
-            break;
-        case 'cyan':
-            setTheme('cyan');
-            break;
-        case 'green':
-            setTheme('green');
-            break;
-        case 'orange':
-            setTheme('orange');
-            break;
-        case 'purple':
-            setTheme('purple');
-            break;
-        case 'yellow':
-            setTheme('yellow');
-            break;
-        default:
-            setTheme('red');
     }
 
     CONFIG.TinyMCE.style_formats.push({
@@ -381,6 +345,114 @@ Hooks.on('ready', () => {
 <p></p>`,
         }
     );
+
+    Hooks.on('renderJournalSheet', () => {
+        function changeColorTheme(theme, e) {
+            setTheme(theme);
+            localStorage.setItem('apsj-theme', theme);
+
+            if (!e) var e = window.event;
+            e.cancelBubble = true;
+            if (e.stopPropagation) e.stopPropagation();
+        }
+
+        function toggleThemeSwitcher() {
+            var tooltip = document.getElementById('theme-switcher');
+            if (tooltip.style.display === 'none') {
+                tooltip.style.display = 'block';
+            } else {
+                tooltip.style.display = 'none';
+            }
+        }
+
+        let buttons = document.getElementById('journal-buttons');
+        let nba = document.createElement('div');
+        nba.innerHTML = `<i class='fas fa-palette'></i>
+		<div id='theme-switcher' style='display:none;'>
+			<div class="ct-none" id="ct-none"></div>
+			<div class="ct-blue" id="ct-blue"></div>
+			<div class="ct-cyan" id="ct-cyan"></div>
+			<div class="ct-green" id="ct-green"></div>
+			<div class="ct-orange" id="ct-orange"></div>
+			<div class="ct-purple" id="ct-purple"></div>
+			<div class="ct-red" id="ct-red"></div>
+			<div class="ct-yellow" id="ct-yellow"></div>
+		</div>`;
+        nba.title = 'Color Theme';
+        nba.classList.add('nav-button');
+        nba.classList.add('apsj-ct');
+        nba.setAttribute('id', 'apsj-color-theme-toggle');
+        buttons.parentNode.insertBefore(nba, buttons.nextSibling);
+
+        document.getElementById('ct-none').addEventListener(
+            'click',
+            function (event) {
+                changeColorTheme('none', event);
+            },
+            false
+        );
+
+        document.getElementById('ct-blue').addEventListener(
+            'click',
+            function (event) {
+                changeColorTheme('blue', event);
+            },
+            false
+        );
+
+        document.getElementById('ct-cyan').addEventListener(
+            'click',
+            function (event) {
+                changeColorTheme('cyan', event);
+            },
+            false
+        );
+
+        document.getElementById('ct-green').addEventListener(
+            'click',
+            function (event) {
+                changeColorTheme('green', event);
+            },
+            false
+        );
+
+        document.getElementById('ct-orange').addEventListener(
+            'click',
+            function (event) {
+                changeColorTheme('orange', event);
+            },
+            false
+        );
+
+        document.getElementById('ct-purple').addEventListener(
+            'click',
+            function (event) {
+                changeColorTheme('purple', event);
+            },
+            false
+        );
+
+        document.getElementById('ct-red').addEventListener(
+            'click',
+            function (event) {
+                changeColorTheme('red', event);
+            },
+            false
+        );
+
+        document.getElementById('ct-yellow').addEventListener(
+            'click',
+            function (event) {
+                changeColorTheme('yellow', event);
+            },
+            false
+        );
+
+        document.getElementById('apsj-color-theme-toggle').onclick =
+            function () {
+                toggleThemeSwitcher();
+            };
+    });
 
     console.log(
         `%c Arius Planeswalker's \n%cStylish\n%cJournal`,

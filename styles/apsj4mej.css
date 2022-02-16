@@ -74,6 +74,15 @@
     --color-apsj-border-trap: rgb(255, 160, 0);
     --color-apsj-border-warning: rgb(160, 0, 0);
 
+    --color-apsj-theme-blue: rgba(18, 69, 170, 0.75);
+    --color-apsj-theme-cyan: rgba(7, 103, 144, 0.75);
+    --color-apsj-theme-green: rgba(0, 128, 0, 0.75);
+    --color-apsj-theme-none: rgba(0, 0, 0, 0, 0.75);
+    --color-apsj-theme-orange: rgba(255, 128, 0, 0.75);
+    --color-apsj-theme-purple: rgba(52, 26, 255, 0.75);
+    --color-apsj-theme-red: rgba(128, 0, 0, 0.75);
+    --color-apsj-theme-yellow: rgba(214, 150, 0, 0.75);
+
     --font-apsj-awesome: 'FontAwesome';
     --font-apsj-book: 'BookInsanity', serif;
     --font-apsj-modesto: 'Modesto Condensed', 'Palatino Linotype', serif;
@@ -112,7 +121,7 @@
 }
 
 :root.orange {
-    --color-apsj-primary: rgb(192, 128, 0);
+    --color-apsj-primary: rgb(255, 128, 0);
     --color-apsj-background-primary: rgba(255, 128, 0, 0.75);
     --color-apsj-border-primary: rgb(255, 160, 0);
 }
@@ -764,4 +773,66 @@ a.inline-roll i {
     border: 2px solid var(--color-apsj-primary);
     border-radius: 0.5em;
     box-shadow: 0 0 5px var(--color-apsj-dark-0);
+}
+
+/**
+* Theme Switcher
+*/
+
+#theme-switcher {
+    position: relative;
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+    border: 4px solid rgb(165, 124, 70);
+    border-radius: 25px;
+    background: url(../assets/parchment-medium.webp);
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
+    z-index: 999;
+    width: 50px;
+}
+
+#theme-switcher div {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid var(--color-apsj-light-0);
+    border-radius: 50%;
+    padding-left: 20px;
+    font-size: 20px;
+    width: 20px;
+    height: 25px;
+    font-family: var(--font-apsj-scalycaps);
+}
+
+.ct-none {
+    background: var(--color-apsj-theme-none);
+}
+
+.ct-blue {
+    background: var(--color-apsj-theme-blue);
+}
+
+.ct-cyan {
+    background: var(--color-apsj-theme-cyan);
+}
+
+.ct-green {
+    background: var(--color-apsj-theme-green);
+}
+
+.ct-orange {
+    background: var(--color-apsj-theme-orange);
+}
+
+.ct-purple {
+    background: var(--color-apsj-theme-purple);
+}
+
+.ct-red {
+    background: var(--color-apsj-theme-red);
+}
+
+.ct-yellow {
+    background: var(--color-apsj-theme-yellow);
 }

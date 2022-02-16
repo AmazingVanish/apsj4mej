@@ -1,5 +1,14 @@
 # RELEASE NOTES
 
+## 2.5.0 - Instant theme Switcher
+
+### ADDED
+
+- Color Palette button in the nav buttons to instantly switch color themes!
+
+### REMOVED
+
+- Settings panel option for changing the color theme which would force a reload of the page
 ## 2.1.0 - Translations
 
 ### ADDED
