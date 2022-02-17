@@ -836,3 +836,18 @@ a.inline-roll i {
 .ct-yellow {
     background: var(--color-apsj-theme-yellow);
 }
+
+/*Fix Wfrp4e & Monk's Enhanced Journal*/
+.wfrp4e.app.window-app .dialog-buttons button,
+.app.window-app .sheet-footer button,
+.app.window-app .form-group .file-picker,
+.app.window-app button[type="button"],
+.app.window-app button[type="submit"],
+.app.window-app button[type="reset"]
+ {
+    width: auto !important;
+ }
+ 
+.tox .tox-menubar {
+    background: url(../assets/parchment.webp) !important;
+}
