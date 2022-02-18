@@ -1,5 +1,11 @@
 # RELEASE NOTES
 
+## 2.5.1 - Warhammer 4e Fix
+
+### ADDED
+
+- [PR #6] Fixes for editor buttons in Warhammer 4e. Thanks Sasmira!
+
 ## 2.5.0 - Instant theme Switcher
 
 ### ADDED
