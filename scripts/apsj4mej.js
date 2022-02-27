@@ -27,8 +27,6 @@ Hooks.on('init', () => {
 
     if (theme) {
         setTheme(theme);
-    } else if (game.settings.get('apsj4mej', 'apsj4mejColorTheme')) {
-        setTheme(game.settings.get('apsj4mej', 'apsj4mejColorTheme'));
     } else {
         setTheme('red');
     }

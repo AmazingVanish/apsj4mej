@@ -1,5 +1,11 @@
 # RELEASE NOTES
 
+## 2.5.2 - Game Setting Fix
+
+### CHANGED
+
+- Remvoed the code to look for old game settngs Should no longer be relevant and was throwing an error in the console for anyone who didn't have the module installed and setup prior to the instant switcher.
+
 ## 2.5.1 - Warhammer 4e Fix
 
 ### ADDED
