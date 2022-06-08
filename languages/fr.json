@@ -58,5 +58,21 @@
     "APSJ4MEJ.blockMagicItemBody": "<p class='dnd-text'>Description de l'article et de ses capacités.</p><p class='dnd-text'>Placez les statistiques de côté à droite et un lien vers l'article sous le diviseur.</p>",
     "APSJ4MEJ.blockReadAloudName": "Bloc: lire à haute voix",
     "APSJ4MEJ.blockReadAloudDescription": "Un bloc élégant pour désigner un texte de saveur à lire à haute voix aux joueurs.",
-    "APSJ4MEJ.blockReadAloudBody": "<p class='dnd-text'>Texte de saveur à lire à haute voix aux joueurs.</p>"
+    "APSJ4MEJ.blockReadAloudBody": "<p class='dnd-text'>Texte de saveur à lire à haute voix aux joueurs.</p>",
+    "APSJ4MEJ.blockDialogueBlueLeftName": "Block: Dialogue (icône bleu, gauche)",
+    "APSJ4MEJ.blockDialogueBlueRightName": "Block: Dialogue (bleu, icône droite)",
+    "APSJ4MEJ.blockDialogueCyanLeftName": "Block: Dialogue (Cyan, icône gauche)",
+    "APSJ4MEJ.blockDialogueCyanRightName": "Block: Dialogue (Cyan, Icône droite)",
+    "APSJ4MEJ.blockDialogueGreenLeftName": "Block: Dialogue (icône verte, gauche)",
+    "APSJ4MEJ.blockDialogueGreenRightName": "Block: Dialogue (Icône verte, droite)",
+    "APSJ4MEJ.blockDialogueOrangeLeftName": "Block: Dialogue (icône orange, gauche)",
+    "APSJ4MEJ.blockDialogueOrangeRightName": "Block: Dialogue (icône orange, droite)",
+    "APSJ4MEJ.blockDialoguePurpleLeftName": "Block: Dialogue (Icône violet, gauche)",
+    "APSJ4MEJ.blockDialoguePurpleRightName": "Block: Dialogue (Icône violet, droite)",
+    "APSJ4MEJ.blockDialogueRedLeftName": "Block: Dialogue (icône rouge, gauche)",
+    "APSJ4MEJ.blockDialogueRedRightName": "Block: Dialogue (icône rouge, droite)",
+    "APSJ4MEJ.blockDialogueYellowLeftName": "Block: Dialogue (icône jaune, gauche)",
+    "APSJ4MEJ.blockDialogueYellowRightName": "Block: Dialogue (jaune, icône droite)",
+    "APSJ4MEJ.blockDialogueDescription": "Un bloc élégant pour désigner le dialogue entre les personnages à lire à haute voix aux joueurs.",
+    "APSJ4MEJ.blockDialogueBody": "<p class='dnd-text'>Dialogue du personnage à lire à haute voix aux joueurs.</p>"
 }

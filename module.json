@@ -6,7 +6,7 @@
     "library": "false",
     "manifestPlusVersion": "1.2.0",
     "minimumCoreVersion": "9",
-    "compatibleCoreVersion": "9.249",
+    "compatibleCoreVersion": "9",
     "author": "Vanish",
     "authors": [
         {
@@ -69,6 +69,10 @@
             {
                 "name": "mce-config",
                 "description": "APSJ4MEJ provides the same toolbar changes, and more!"
+            },
+            {
+                "name": "custom-fonts",
+                "description": "This module provides several custom fonts for use in the journal. It is not recommended to use this module with the Custom Fonts module. You will need to choose which module provides more benefit to you and which one you want to use."
             }
         ]
     },

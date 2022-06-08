@@ -58,5 +58,21 @@
     "APSJ4MEJ.blockMagicItemBody": "<p class='dnd-text'>Descripción del artículo y sus habilidades.</p><p class='dnd-text'>Coloque las estadísticas en un lado a la derecha, y un enlace al artículo debajo del divisor.</p>",
     "APSJ4MEJ.blockReadAloudName": "Cuadra: Leer en voz alta",
     "APSJ4MEJ.blockReadAloudDescription": "Un bloque con estilo para denotar texto de sabor a leer en voz alta a los jugadores.",
-    "APSJ4MEJ.blockReadAloudBody": "<p class='dnd-text'>Texto de sabor para leer en voz alta a los jugadores.</p>"
+    "APSJ4MEJ.blockReadAloudBody": "<p class='dnd-text'>Texto de sabor para leer en voz alta a los jugadores.</p>",
+    "APSJ4MEJ.blockDialogueBlueLeftName": "Bloque: Diálogo (azul, icono izquierdo)",
+    "APSJ4MEJ.blockDialogueBlueRightName": "Bloque: Diálogo (azul, icono correcto)",
+    "APSJ4MEJ.blockDialogueCyanLeftName": "Bloque: Diálogo (Cyan, ícono izquierdo)",
+    "APSJ4MEJ.blockDialogueCyanRightName": "Bloque: Diálogo (Cyan, icono correcto)",
+    "APSJ4MEJ.blockDialogueGreenLeftName": "Bloque: Diálogo (verde, icono izquierdo)",
+    "APSJ4MEJ.blockDialogueGreenRightName": "Bloque: Diálogo (verde, icono correcto)",
+    "APSJ4MEJ.blockDialogueOrangeLeftName": "Bloque: Diálogo (naranja, icono izquierdo)",
+    "APSJ4MEJ.blockDialogueOrangeRightName": "Bloque: Diálogo (naranja, icono correcto)",
+    "APSJ4MEJ.blockDialoguePurpleLeftName": "Bloque: Diálogo (púrpura, ícono izquierdo)",
+    "APSJ4MEJ.blockDialoguePurpleRightName": "Bloque: Diálogo (púrpura, icono correcto)",
+    "APSJ4MEJ.blockDialogueRedLeftName": "Bloque: Diálogo (rojo, icono izquierdo)",
+    "APSJ4MEJ.blockDialogueRedRightName": "Bloque: Diálogo (rojo, icono correcto)",
+    "APSJ4MEJ.blockDialogueYellowLeftName": "Bloque: Diálogo (amarillo, icono izquierdo)",
+    "APSJ4MEJ.blockDialogueYellowRightName": "Bloque: Diálogo (amarillo, icono derecho)",
+    "APSJ4MEJ.blockDialogueDescription": "Un bloque elegante para denotar el diálogo entre los personajes que se leerán en voz alta a los jugadores.",
+    "APSJ4MEJ.blockDialogueBody": "<p class='dnd-text'>Diálogo de personajes para leer en voz alta a los jugadores.</p>"
 }

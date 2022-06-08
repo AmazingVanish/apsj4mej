@@ -341,6 +341,188 @@ Hooks.on('ready', () => {
                 `</main>
 </section>
 <p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialogueBlueLeftName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-blue">
+	<main>
+		<div class="dialogue-icon-left blue"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialogueBlueRightName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-blue">
+	<main>
+		<div class="dialogue-icon-right blue"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialogueCyanLeftName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-cyan">
+	<main>
+		<div class="dialogue-icon-left cyan"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialogueCyanRightName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-cyan">
+	<main>
+		<div class="dialogue-icon-right cyan"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialogueGreenLeftName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-green">
+	<main>
+		<div class="dialogue-icon-left green"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialogueGreenRightName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-green">
+	<main>
+		<div class="dialogue-icon-right green"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialogueOrangeLeftName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-orange">
+	<main>
+		<div class="dialogue-icon-left orange"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialogueOrangeRightName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-orange">
+	<main>
+		<div class="dialogue-icon-right orange"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialoguePurpleLeftName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-purple">
+	<main>
+		<div class="dialogue-icon-left purple"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialoguePurpleRightName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-purple">
+	<main>
+		<div class="dialogue-icon-right purple"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialogueRedLeftName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-red">
+	<main>
+		<div class="dialogue-icon-left red"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialogueRedRightName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-red">
+	<main>
+		<div class="dialogue-icon-right red"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialogueYellowLeftName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-yellow">
+	<main>
+		<div class="dialogue-icon-left yellow"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
+        },
+        {
+            title: game.i18n.format('APSJ4MEJ.blockDialogueYellowRightName'),
+            description: game.i18n.format('APSJ4MEJ.blockDialogueDescription'),
+            content:
+                `
+<section class="block dialogue-yellow">
+	<main>
+		<div class="dialogue-icon-right yellow"></div>` +
+                game.i18n.format('APSJ4MEJ.blockDialogueBody') +
+                `</main>
+</section>
+<p></p>`,
         }
     );
 

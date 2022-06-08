@@ -1,10 +1,20 @@
 # RELEASE NOTES
 
+## 2.6.0 - Dialogue Blocks
+
+### ADDED
+
+- Dialogue blocks of all colors, with options for the icon to present on the left or right so you can simulate chatter back and forth
+
+### CHANGED
+
+- All fonts smaller than 16pt have been increased to 16pt to avoid eyestrain from teeny, tiny words
+
 ## 2.5.2 - Game Setting Fix
 
 ### CHANGED
 
-- Remvoed the code to look for old game settngs Should no longer be relevant and was throwing an error in the console for anyone who didn't have the module installed and setup prior to the instant switcher.
+- Removed the code to look for old game settngs Should no longer be relevant and was throwing an error in the console for anyone who didn't have the module installed and setup prior to the instant switcher.
 
 ## 2.5.1 - Warhammer 4e Fix
 
@@ -21,6 +31,7 @@
 ### REMOVED
 
 - Settings panel option for changing the color theme which would force a reload of the page
+
 ## 2.1.0 - Translations
 
 ### ADDED
@@ -28,7 +39,7 @@
 - French translation
 - German translation
 - Spanish translation
-- Data HEading text style
+- Data Heading text style
 
 ### CHANGED
 

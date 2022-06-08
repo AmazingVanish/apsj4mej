@@ -437,7 +437,7 @@ a.inline-roll i {
 .dnd-data {
     font-family: var(--font-apsj-scalysans) !important;
     font-weight: 700 !important;
-    font-size: 10pt !important;
+    font-size: 16pt !important;
 }
 
 .dnd-data-heading {
@@ -449,14 +449,14 @@ a.inline-roll i {
 .dnd-panel-heading {
     font-family: var(--font-apsj-scalycaps) !important;
     font-weight: 700 !important;
-    font-size: 14pt !important;
+    font-size: 16pt !important;
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
 }
 
 .dnd-text {
     font-family: var(--font-apsj-book) !important;
     font-weight: 400 !important;
-    font-size: 12pt !important;
+    font-size: 16pt !important;
 }
 
 /**
@@ -555,7 +555,7 @@ a.inline-roll i {
 **/
 
 .block {
-    margin: 1em 5%;
+    margin: 1em;
     padding: 1em;
     width: 90%;
     display: flex;
@@ -712,7 +712,7 @@ a.inline-roll i {
 }
 
 .block.read-aloud {
-    border: 2px solid var(--color-apsj-primary);
+    border: 2px solid var(--color-apsj-border-primary);
     border-radius: 0.5em;
     background: linear-gradient(
         var(--color-apsj-background-light-0),
@@ -721,18 +721,164 @@ a.inline-roll i {
     box-shadow: 0 0 5px var(--color-apsj-dark-0);
 }
 
-.ra-icon {
+.ra-icon,
+.dialogue-icon-left {
     float: left;
-    margin: 0 8px 0 -30px;
+    margin: 0 8px 0 -25px;
+}
+
+.dialogue-icon-right {
+    float: right;
+    margin: 0 -25px 0 8px;
 }
 
 .ra-icon::before {
     font-family: var(--font-apsj-awesome);
     font-weight: 900;
     font-size: xxx-large;
-    color: var(--color-apsj-border-primary);
+    color: var(--color-apsj-primary);
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
     content: '\f4ad';
+}
+
+.block.dialogue-blue {
+    border: 2px solid var(--color-apsj-border-info);
+    border-radius: 0.5em;
+    background: linear-gradient(
+        var(--color-apsj-background-light-0),
+        var(--color-apsj-background-dark-4)
+    );
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
+}
+
+.dialogue-icon-left.blue::before,
+.dialogue-icon-right.blue::before {
+    font-family: var(--font-apsj-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--color-apsj-theme-blue);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
+    content: '\f075';
+}
+
+.block.dialogue-cyan {
+    border: 2px solid var(--color-apsj-border-bonus);
+    border-radius: 0.5em;
+    background: linear-gradient(
+        var(--color-apsj-background-light-0),
+        var(--color-apsj-background-dark-4)
+    );
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
+}
+
+.dialogue-icon-left.cyan::before,
+.dialogue-icon-right.cyan::before {
+    font-family: var(--font-apsj-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--color-apsj-theme-cyan);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
+    content: '\f075';
+}
+
+.block.dialogue-green {
+    border: 2px solid var(--color-apsj-border-loot);
+    border-radius: 0.5em;
+    background: linear-gradient(
+        var(--color-apsj-background-light-0),
+        var(--color-apsj-background-dark-4)
+    );
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
+}
+
+.dialogue-icon-left.green::before,
+.dialogue-icon-right.green::before {
+    font-family: var(--font-apsj-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--color-apsj-theme-green);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
+    content: '\f075';
+}
+
+.block.dialogue-orange {
+    border: 2px solid var(--color-apsj-border-trap);
+    border-radius: 0.5em;
+    background: linear-gradient(
+        var(--color-apsj-background-light-0),
+        var(--color-apsj-background-dark-4)
+    );
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
+}
+
+.dialogue-icon-left.orange::before,
+.dialogue-icon-right.orange::before {
+    font-family: var(--font-apsj-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--color-apsj-theme-orange);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
+    content: '\f075';
+}
+
+.block.dialogue-purple {
+    border: 2px solid var(--color-apsj-border-effect);
+    border-radius: 0.5em;
+    background: linear-gradient(
+        var(--color-apsj-background-light-0),
+        var(--color-apsj-background-dark-4)
+    );
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
+}
+
+.dialogue-icon-left.purple::before,
+.dialogue-icon-right.purple::before {
+    font-family: var(--font-apsj-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--color-apsj-theme-purple);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
+    content: '\f075';
+}
+
+.block.dialogue-red {
+    border: 2px solid var(--color-apsj-border-primary);
+    border-radius: 0.5em;
+    background: linear-gradient(
+        var(--color-apsj-background-light-0),
+        var(--color-apsj-background-dark-4)
+    );
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
+}
+
+.dialogue-icon-left.red::before,
+.dialogue-icon-right.red::before {
+    font-family: var(--font-apsj-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--color-apsj-theme-red);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
+    content: '\f075';
+}
+
+.block.dialogue-yellow {
+    border: 2px solid var(--color-apsj-border-warning);
+    border-radius: 0.5em;
+    background: linear-gradient(
+        var(--color-apsj-background-light-0),
+        var(--color-apsj-background-dark-4)
+    );
+    box-shadow: 0 0 5px var(--color-apsj-dark-0);
+}
+
+.dialogue-icon-left.yellow::before,
+.dialogue-icon-right.yellow::before {
+    font-family: var(--font-apsj-awesome);
+    font-weight: 900;
+    font-size: xxx-large;
+    color: var(--color-apsj-theme-yellow);
+    text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
+    content: '\f075';
 }
 
 /**
@@ -841,13 +987,12 @@ a.inline-roll i {
 .wfrp4e.app.window-app .dialog-buttons button,
 .app.window-app .sheet-footer button,
 .app.window-app .form-group .file-picker,
-.app.window-app button[type="button"],
-.app.window-app button[type="submit"],
-.app.window-app button[type="reset"]
- {
+.app.window-app button[type='button'],
+.app.window-app button[type='submit'],
+.app.window-app button[type='reset'] {
     width: auto !important;
- }
- 
+}
+
 .tox .tox-menubar {
     background: url(../assets/parchment.webp) !important;
 }

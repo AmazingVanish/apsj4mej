@@ -58,5 +58,21 @@
     "APSJ4MEJ.blockMagicItemBody": "<p class='dnd-text'>Description of the item and its abilities.</p><p class='dnd-text'>Place Stats in the aside to the right, and a link to the item below the divider.</p>",
     "APSJ4MEJ.blockReadAloudName": "Block: Read Aloud",
     "APSJ4MEJ.blockReadAloudDescription": "A stylish block to denote flavor text to be read aloud to the players.",
-    "APSJ4MEJ.blockReadAloudBody": "<p class='dnd-text'>Flavor text to read aloud to the players.</p>"
+    "APSJ4MEJ.blockReadAloudBody": "<p class='dnd-text'>Flavor text to read aloud to the players.</p>",
+    "APSJ4MEJ.blockDialogueBlueLeftName": "Block: Dialogue (Blue, Left Icon)",
+    "APSJ4MEJ.blockDialogueBlueRightName": "Block: Dialogue (Blue, Right Icon)",
+    "APSJ4MEJ.blockDialogueCyanLeftName": "Block: Dialogue (Cyan, Left Icon)",
+    "APSJ4MEJ.blockDialogueCyanRightName": "Block: Dialogue (Cyan, Right Icon)",
+    "APSJ4MEJ.blockDialogueGreenLeftName": "Block: Dialogue (Green, Left Icon)",
+    "APSJ4MEJ.blockDialogueGreenRightName": "Block: Dialogue (Green, Right Icon)",
+    "APSJ4MEJ.blockDialogueOrangeLeftName": "Block: Dialogue (Orange, Left Icon)",
+    "APSJ4MEJ.blockDialogueOrangeRightName": "Block: Dialogue (Orange, Right Icon)",
+    "APSJ4MEJ.blockDialoguePurpleLeftName": "Block: Dialogue (Purple, Left Icon)",
+    "APSJ4MEJ.blockDialoguePurpleRightName": "Block: Dialogue (Purple, Right Icon)",
+    "APSJ4MEJ.blockDialogueRedLeftName": "Block: Dialogue (Red, Left Icon)",
+    "APSJ4MEJ.blockDialogueRedRightName": "Block: Dialogue (Red, Right Icon)",
+    "APSJ4MEJ.blockDialogueYellowLeftName": "Block: Dialogue (Yellow, Left Icon)",
+    "APSJ4MEJ.blockDialogueYellowRightName": "Block: Dialogue (Yellow, Right Icon)",
+    "APSJ4MEJ.blockDialogueDescription": "A stylish block to denote dialogue between characters to be read aloud to the players.",
+    "APSJ4MEJ.blockDialogueBody": "<p class='dnd-text'>Character dialogue to read aloud to the players.</p>"
 }

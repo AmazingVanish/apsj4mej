@@ -58,5 +58,21 @@
     "APSJ4MEJ.blockMagicItemBody": "<p class='dnd-text'>Beschreibung des Artikels und seiner Fähigkeiten.</p><p class='dnd-text'> Stellen Sie Statistiken in die Seite zur Seite und einen Link zum Artikel unter dem Teiler.</p>",
     "APSJ4MEJ.blockReadAloudName": "Block: Vorlesen",
     "APSJ4MEJ.blockReadAloudDescription": "Ein stilvoller Block, der den Geschmack Text angibt, der den Spielern laut gelesen wird.",
-    "APSJ4MEJ.blockReadAloudBody": "<p class='dnd-text'>Flavour-Text, der den Spielern laut gelesen wird.</p>"
+    "APSJ4MEJ.blockReadAloudBody": "<p class='dnd-text'>Flavour-Text, der den Spielern laut gelesen wird.</p>",
+    "APSJ4MEJ.blockDialogueBlueLeftName": "Block: Dialog (blau, links Ikone)",
+    "APSJ4MEJ.blockDialogueBlueRightName": "Block: Dialog (blau, rechte Symbol)",
+    "APSJ4MEJ.blockDialogueCyanLeftName": "Block: Dialog (Cyan, links Ikone)",
+    "APSJ4MEJ.blockDialogueCyanRightName": "Block: Dialog (Cyan, Rechtssymbol)",
+    "APSJ4MEJ.blockDialogueGreenLeftName": "Block: Dialog (grün, links Ikone)",
+    "APSJ4MEJ.blockDialogueGreenRightName": "Block: Dialog (grün, rechte Symbol)",
+    "APSJ4MEJ.blockDialogueOrangeLeftName": "Block: Dialog (orange, linker Symbol)",
+    "APSJ4MEJ.blockDialogueOrangeRightName": "Block: Dialog (orange, rechtes Symbol)",
+    "APSJ4MEJ.blockDialoguePurpleLeftName": "Block: Dialog (lila, linke Ikone)",
+    "APSJ4MEJ.blockDialoguePurpleRightName": "Block: Dialog (lila, rechte Symbol)",
+    "APSJ4MEJ.blockDialogueRedLeftName": "Block: Dialog (rot, links Ikone)",
+    "APSJ4MEJ.blockDialogueRedRightName": "Block: Dialog (rot, rechte Symbol)",
+    "APSJ4MEJ.blockDialogueYellowLeftName": "Block: Dialog (gelb, links Ikone)",
+    "APSJ4MEJ.blockDialogueYellowRightName": "Block: Dialog (gelb, rechte Symbol)",
+    "APSJ4MEJ.blockDialogueDescription": "Ein stilvoller Block, um den Spielern den Dialog zwischen Charakteren zu bezeichnen.",
+    "APSJ4MEJ.blockDialogueBody": "<p class='dnd-text'>Charakterdialog zum Vorlesen den Spielern.</p>"
 }
