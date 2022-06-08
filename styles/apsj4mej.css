@@ -449,7 +449,7 @@ a.inline-roll i {
 .dnd-panel-heading {
     font-family: var(--font-apsj-scalycaps) !important;
     font-weight: 700 !important;
-    font-size: 16pt !important;
+    font-size: 18pt !important;
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
 }
 
@@ -475,6 +475,7 @@ a.inline-roll i {
     list-style: none;
     font-family: var(--font-apsj-awesome);
     font-weight: 900;
+    font-size: 18px;
 }
 
 .panel::before {
@@ -711,6 +712,12 @@ a.inline-roll i {
     text-shadow: 0 0 8px var(--color-apsj-border-info) !important;
 }
 
+.ra-icon,
+.dialogue-icon-left {
+    float: left;
+    margin: 0 8px 0 -25px;
+}
+
 .block.read-aloud {
     border: 2px solid var(--color-apsj-border-primary);
     border-radius: 0.5em;
@@ -721,17 +728,6 @@ a.inline-roll i {
     box-shadow: 0 0 5px var(--color-apsj-dark-0);
 }
 
-.ra-icon,
-.dialogue-icon-left {
-    float: left;
-    margin: 0 8px 0 -25px;
-}
-
-.dialogue-icon-right {
-    float: right;
-    margin: 0 -25px 0 8px;
-}
-
 .ra-icon::before {
     font-family: var(--font-apsj-awesome);
     font-weight: 900;
@@ -739,6 +735,11 @@ a.inline-roll i {
     color: var(--color-apsj-primary);
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
     content: '\f4ad';
+}
+
+.dialogue-icon-right {
+    float: right;
+    margin: 0 -25px 0 8px;
 }
 
 .block.dialogue-blue {
@@ -756,7 +757,7 @@ a.inline-roll i {
     font-family: var(--font-apsj-awesome);
     font-weight: 900;
     font-size: xxx-large;
-    color: var(--color-apsj-theme-blue);
+    color: var(--color-apsj-border-info);
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
     content: '\f075';
 }
@@ -776,7 +777,7 @@ a.inline-roll i {
     font-family: var(--font-apsj-awesome);
     font-weight: 900;
     font-size: xxx-large;
-    color: var(--color-apsj-theme-cyan);
+    color: var(--color-apsj-border-bonus);
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
     content: '\f075';
 }
@@ -796,7 +797,7 @@ a.inline-roll i {
     font-family: var(--font-apsj-awesome);
     font-weight: 900;
     font-size: xxx-large;
-    color: var(--color-apsj-theme-green);
+    color: var(--color-apsj-border-loot);
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
     content: '\f075';
 }
@@ -816,7 +817,7 @@ a.inline-roll i {
     font-family: var(--font-apsj-awesome);
     font-weight: 900;
     font-size: xxx-large;
-    color: var(--color-apsj-theme-orange);
+    color: var(--color-apsj-border-trap);
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
     content: '\f075';
 }
@@ -836,7 +837,7 @@ a.inline-roll i {
     font-family: var(--font-apsj-awesome);
     font-weight: 900;
     font-size: xxx-large;
-    color: var(--color-apsj-theme-purple);
+    color: var(--color-apsj-border-effect);
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
     content: '\f075';
 }
@@ -856,13 +857,13 @@ a.inline-roll i {
     font-family: var(--font-apsj-awesome);
     font-weight: 900;
     font-size: xxx-large;
-    color: var(--color-apsj-theme-red);
+    color: var(--color-apsj-border-primary);
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
     content: '\f075';
 }
 
 .block.dialogue-yellow {
-    border: 2px solid var(--color-apsj-border-warning);
+    border: 2px solid var(--color-apsj-border-note);
     border-radius: 0.5em;
     background: linear-gradient(
         var(--color-apsj-background-light-0),
@@ -876,7 +877,7 @@ a.inline-roll i {
     font-family: var(--font-apsj-awesome);
     font-weight: 900;
     font-size: xxx-large;
-    color: var(--color-apsj-theme-yellow);
+    color: var(--color-apsj-border-note);
     text-shadow: 1px 1px 2px var(--color-apsj-dark-0);
     content: '\f075';
 }

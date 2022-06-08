@@ -9,6 +9,7 @@
 ### CHANGED
 
 - All fonts smaller than 16pt have been increased to 16pt to avoid eyestrain from teeny, tiny words
+- Margin layout for Read Aloud blocks and Dialogue blocks modified to work correctly in all systems. (Thanks to mistamichal for the bug report!)
 
 ## 2.5.2 - Game Setting Fix
 

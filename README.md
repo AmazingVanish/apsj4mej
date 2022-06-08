@@ -65,12 +65,12 @@ _Screenshot of an Encounter Entry_
 ![loot](https://raw.github.com/AmazingVanish/apsj4mej/master/media/apsj4mej-loot.webp)
 _Screenshot of a Loot Entry_
 
-
 ## Conflicts
 
 - Arius Planeswalker's Stylish Journal (You don't need it if you're using this. It's the same thing essentially.)
 - MCE Config
 - Custom Fonts
+
 ## Credits
 
 Border used on the cards from [Ornament Vectors by Vecteezy](https://www.vecteezy.com/free-vector/ornament)
