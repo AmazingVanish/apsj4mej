@@ -41,6 +41,9 @@ _The available Panels_
 ![blocks](https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/media/apsj4mej-blocks.webp)
 _The available Blocks_
 
+![dialogues](https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/media/apsj4mej-dialogues.webp)
+_The available Dialogue Blocks_
+
 ![elements](https://raw.githubusercontent.com/AmazingVanish/apsj4mej/master/media/apsj4mej-elements.webp)
 _The available Element Styling_
 
